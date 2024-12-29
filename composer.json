@@ -53,6 +53,10 @@
     "extra": {
         "laravel": {
             "dont-discover": []
+        },
+        "grumphp": {
+            "config-default-path": "tools/grumphp.yml",
+            "disable-plugin": false
         }
     },
     "config": {

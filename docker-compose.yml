@@ -1,5 +1,6 @@
 services:
     php:
+        container_name: laravel_ghipy-php
         build:
             context: .
             dockerfile: Dockerfile
@@ -10,6 +11,7 @@ services:
         networks:
             - laravel
     nginx:
+        container_name: laravel_ghipy-nginx
         image: nginx:alpine
         ports:
             - "8080:80"
@@ -21,6 +23,7 @@ services:
         networks:
             - laravel
     db:
+        container_name: laravel_ghipy-db
         image: mysql:8.0
         environment:
             MYSQL_ROOT_PASSWORD: root

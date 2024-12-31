@@ -19,6 +19,7 @@
         "nunomaduro/collision": "^7.0",
         "phpro/grumphp": "^2.10",
         "phpunit/phpunit": "^10.1",
+        "psalm/phar": "^5.26",
         "spatie/laravel-ignition": "^2.0",
         "symplify/easy-coding-standard": "^12.5"
     },

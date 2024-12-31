@@ -33,7 +33,10 @@ rebuild: ## Rebuild the containers from scratch
 static-analysis: ## Runs static code analysis to check for errors, architecture violations, and code quality issues.
 	$(DOCKER_EXEC) php ./vendor/psalm/phar/psalm.phar --config ./tools/psalm.xml
 
-lint: ## Runs the linter to check for violations to the code style
+mess-detector: ## Checks code for dirty code
+	$(DOCKER_EXEC) php ./vendor/bin/phpmd src,tests,tools text ./tools/phpmd.xml
+
+lint: ## Runs the linter to check for code style violations
 	$(DOCKER_EXEC) php ./vendor/bin/ecs check --config ./tools/ecs.php
 
 ping-mysql: ## Ping the mysql service

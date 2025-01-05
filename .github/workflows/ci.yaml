@@ -1,0 +1,45 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: docker compose pull
+
+      - name: 🎻 Install dependencies
+        run: make composer-install
+
+      - name: 🐳 Start all the environment
+        run: make start
+
+      - name: 🔦 Lint
+        run: make lint
+
+      - name: 🏁 Static analysis
+        run: make static-analysis
+
+      - name: 🤢 Mess detector
+        run: make static-analysis
+
+      - name: 🏗️ Architecture
+        run: make test-architecture
+
+      - name: 🦭 Wait for the database to get up
+        run: |
+          while ! make ping-mysql &>/dev/null; do
+              echo "Waiting for database connection..."
+              sleep 2
+          done
+
+      - name: ✅ Run the tests
+        run: make test

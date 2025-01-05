@@ -39,6 +39,9 @@ mess-detector: ## Checks code for dirty code
 lint: ## Runs the linter to check for code style violations
 	$(DOCKER_EXEC) php ./vendor/bin/ecs check --config ./tools/ecs.php
 
+test-architecture:
+	$(DOCKER_EXEC) php -d memory_limit=4G ./vendor/bin/phpstan analyse -c ./tools/phpstan.neon
+
 ping-mysql: ## Ping the mysql service
 	@docker exec laravel_ghipy-db mysqladmin --user=laraveluser --password=secret --host "127.0.0.1" ping --silent
 

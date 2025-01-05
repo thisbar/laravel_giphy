@@ -1,0 +1,19 @@
+includes:
+	- ../vendor/phpat/phpat/extension.neon
+
+parameters:
+	level: 0
+	paths:
+		- ../src
+		- ../tests
+
+services:
+	-
+		class: LaravelGhipy\Tests\Shared\SharedArchitectureTest
+		tags:
+			- phpat.test
+
+	-
+		class: LaravelGhipy\Tests\Core\CoreArchitectureTest
+		tags:
+			- phpat.test

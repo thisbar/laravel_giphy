@@ -1,2 +1,16 @@
 grumphp:
-    tasks: { ecs: null, phpmd: null, phpstan: null, psalm: null }
+  tasks:
+    ecs:
+      config: ./tools/ecs.php
+    phpmd:
+      ruleset: [./tools/phpmd.xml]
+      whitelist_patterns:
+        - src/
+        - tests/
+        - tools/
+    phpstan:
+      configuration: ./tools/phpstan.neon
+      memory_limit: 4G
+      level: 0
+    psalm:
+      config: ./tools/psalm.xml

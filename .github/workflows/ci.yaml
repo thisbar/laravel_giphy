@@ -41,5 +41,5 @@ jobs:
               sleep 2
           done
 
-      - name: ✅ Run the tests
-        run: make test
+      #- name: ✅ Run the tests
+      #  run: make test

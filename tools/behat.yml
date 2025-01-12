@@ -1,0 +1,12 @@
+default:
+  extensions:
+    Behat\MinkExtension:
+      sessions:
+        default:
+          browserkit_http: ~
+      base_url: 'http://host.docker.internal:8080'
+  suites:
+    gifs:
+      paths: [ tests/Feature/Gifs ]
+      contexts:
+        - LaravelGhipy\Tests\Shared\Infrastructure\Behat\ApiContext

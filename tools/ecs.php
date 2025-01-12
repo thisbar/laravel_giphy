@@ -11,5 +11,5 @@ return function (ECSConfig $ecsConfig): void {
         realpath(__DIR__ . '/../tests'),
     ]);
 
-    $ecsConfig->sets([CodingStyle::DEFAULT]);
+    $ecsConfig->sets([CodingStyle::ALIGNED]);
 };

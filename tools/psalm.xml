@@ -25,5 +25,10 @@
                 <directory name="tests"/>
             </errorLevel>
         </PropertyNotSetInConstructor>
+        <UndefinedInterfaceMethod>
+            <errorLevel type="suppress">
+                <file name="tests/Shared/Infrastructure/Mink/MinkHelper.php"/>
+            </errorLevel>
+        </UndefinedInterfaceMethod>
     </issueHandlers>
 </psalm>

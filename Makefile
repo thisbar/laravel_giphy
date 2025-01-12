@@ -43,8 +43,12 @@ test-architecture:
 	$(DOCKER_EXEC) php -d memory_limit=4G ./vendor/bin/phpstan analyse -c ./tools/phpstan.neon
 
 test:
+	@$(DOCKER_EXEC) php artisan config:cache --env=testing
 	@mkdir -p build/test_results/phpunit
 	@$(DOCKER_EXEC) php ./vendor/bin/phpunit --testdox --exclude-group='disabled' -c ./tools/phpunit.xml || TEST_FAILED=1
+	@$(DOCKER_EXEC) php ./vendor/bin/behat --format=pretty -v --config ./tools/behat.yml  || TEST_FAILED=1
+	@$(DOCKER_EXEC) php artisan config:cache --env=local && make clean-cache
+	@test -z "$${TEST_FAILED}"
 
 ping-mysql: ## Ping the mysql service
 	@docker exec laravel_ghipy-db mysqladmin --user=laraveluser --password=secret --host "127.0.0.1" ping --silent

@@ -1,7 +1,7 @@
 PROJECT_NAME := laravel_ghipy
 CURRENT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 PHP_CONTAINER := $(PROJECT_NAME)-php
-DOCKER_EXEC := docker exec --user=$(id -u):$(id -g) $(PHP_CONTAINER)
+DOCKER_EXEC := docker exec -it --user=$(id -u):$(id -g) $(PHP_CONTAINER)
 
 .PHONY: help
 
@@ -41,6 +41,10 @@ lint: ## Runs the linter to check for code style violations
 
 test-architecture:
 	$(DOCKER_EXEC) php -d memory_limit=4G ./vendor/bin/phpstan analyse -c ./tools/phpstan.neon
+
+test:
+	@mkdir -p build/test_results/phpunit
+	@$(DOCKER_EXEC) php ./vendor/bin/phpunit --testdox --exclude-group='disabled' -c ./tools/phpunit.xml || TEST_FAILED=1
 
 ping-mysql: ## Ping the mysql service
 	@docker exec laravel_ghipy-db mysqladmin --user=laraveluser --password=secret --host "127.0.0.1" ping --silent

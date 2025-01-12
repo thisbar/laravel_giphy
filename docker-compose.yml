@@ -36,6 +36,15 @@ services:
             - dbdata:/var/lib/mysql
         networks:
             - laravel
+    wiremock:
+        image: wiremock/wiremock:latest
+        container_name: wiremock
+        ports:
+            - "9001:8080"
+        volumes:
+            - ./tests/Core/Gifs/Infrastructure/Wiremock:/home/wiremock/mappings
+        environment:
+            - WIREMOCK_ROOT_DIRECTORY=/home/wiremock
 
 networks:
     laravel:

@@ -4,7 +4,7 @@ default:
       sessions:
         default:
           browserkit_http: ~
-      base_url: 'http://host.docker.internal:8080'
+      base_url: http://nginx:80
   suites:
     gifs:
       paths: [ tests/Feature/Gifs ]

@@ -10,6 +10,7 @@ services:
             - "9000:9000"
         networks:
             - laravel
+
     nginx:
         container_name: laravel_ghipy-nginx
         image: nginx:alpine
@@ -22,6 +23,7 @@ services:
             - php
         networks:
             - laravel
+
     db:
         container_name: laravel_ghipy-db
         image: mysql:8.0
@@ -36,6 +38,7 @@ services:
             - dbdata:/var/lib/mysql
         networks:
             - laravel
+
     wiremock:
         image: wiremock/wiremock:latest
         container_name: wiremock
@@ -45,6 +48,8 @@ services:
             - ./tests/Core/Gifs/Infrastructure/Wiremock:/home/wiremock/mappings
         environment:
             - WIREMOCK_ROOT_DIRECTORY=/home/wiremock
+        networks:
+            - laravel
 
 networks:
     laravel:

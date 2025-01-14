@@ -1,0 +1,29 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPath": "/v1/gifs/3o7ZeAiCICH5bj1Esg",
+        "queryParameters": {
+            "api_key": { "equalTo": "" }
+        }
+    },
+    "response": {
+        "status": 200,
+        "jsonBody":
+            {
+                "data": {
+                    "id": "3o7ZeAiCICH5bj1Esg",
+                    "url": "https://giphy.com/gifs/afv-funny-fail-lol-3o7ZeAiCICH5bj1Esg",
+                    "title": "baby lol GIF",
+                    "rating": "pg"
+                },
+                "meta": {
+                    "status": 200,
+                    "msg": "OK",
+                    "response_id": "1q1amaim1gis0oj99bhb5s5fo2gosgmmipns78bq"
+                }
+            },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

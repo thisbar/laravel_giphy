@@ -1,0 +1,24 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPath": "/v1/gifs/x4gnt3b9y85l",
+        "queryParameters": {
+            "api_key": { "equalTo": "" }
+        }
+    },
+    "response": {
+        "status": 404,
+        "jsonBody":
+            {
+                "data": [],
+                "meta": {
+                    "status": 404,
+                    "msg": "Not Found",
+                    "response_id": "x4gnt3b9y85lfdtd3q5spnywdii9obur1ldfefcy"
+                }
+            },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

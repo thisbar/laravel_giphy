@@ -25,6 +25,23 @@
                 <directory name="tests"/>
             </errorLevel>
         </PropertyNotSetInConstructor>
+        <PossiblyUndefinedMethod>
+            <errorLevel type="suppress">
+                <directory name="tests"/>
+            </errorLevel>
+        </PossiblyUndefinedMethod>
+        <PossiblyInvalidArgument>
+            <errorLevel type="suppress">
+                <directory name="tests"/>
+                <directory name="app/Http/Controllers"/>
+            </errorLevel>
+        </PossiblyInvalidArgument>
+        <InvalidArgument>
+            <errorLevel type="suppress">
+                <directory name="tests"/>
+                <directory name="app/Http/Controllers"/>
+            </errorLevel>
+        </InvalidArgument>
         <UndefinedInterfaceMethod>
             <errorLevel type="suppress">
                 <file name="tests/Shared/Infrastructure/Mink/MinkHelper.php"/>

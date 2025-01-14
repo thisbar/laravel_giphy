@@ -1,0 +1,25 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPath": "/v1/gifs/invalid-id",
+        "queryParameters": {
+            "api_key": { "equalTo": "" }
+        }
+    },
+    "response": {
+        "status": 404,
+        "jsonBody":
+            {
+                "data": [],
+                "meta": {
+                    "status": 400,
+                    "msg": "Validation error",
+                    "response_id": "ombkiy4i9zqgortj22n4pv9pv88uemg1gte6ap61",
+                    "error_code": "INVALID_ARGUMENT: gifId with value \"no-valid-id\" - invalid GIF id"
+                }
+            },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPath": "/v1/gifs/search",
+        "queryParameters": {
+            "q": { "equalTo": "funny" },
+            "limit": { "equalTo": "5" },
+            "offset": { "equalTo": "0" },
+            "api_key": { "equalTo": "" }
+        }
+    },
+    "response": {
+        "status": 200,
+        "jsonBody":
+        {
+            "data": [
+                {
+                    "id": "3o7ZeAiCICH5bj1Esg",
+                    "url": "https://giphy.com/gifs/afv-funny-fail-lol-3o7ZeAiCICH5bj1Esg",
+                    "title": "baby lol GIF",
+                    "rating": "pg"
+                },
+                {
+                    "id": "26tP3M3i03hoIYL6M",
+                    "url": "https://giphy.com/gifs/afv-funny-fail-lol-26tP3M3i03hoIYL6M",
+                    "title": "Kid Lol GIF",
+                    "rating": "pg"
+                }
+            ],
+            "meta": {
+                "status": 200,
+                "msg": "OK",
+                "response_id": "hwtmpsghs6wni1hijamcyz0zkt12melln7a76l6y"
+            },
+            "pagination": {
+                "total_count": 500,
+                "count": 2,
+                "offset": 0
+            }
+        },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPath": "/v1/gifs/search",
+        "queryParameters": {
+            "q": { "equalTo": "no-results" },
+            "limit": { "equalTo": "5" },
+            "offset": { "equalTo": "0" },
+            "api_key": { "equalTo": "" }
+        }
+    },
+    "response": {
+        "status": 200,
+        "jsonBody":
+        {
+            "data": [],
+            "meta": {
+                "status": 200,
+                "msg": "OK",
+                "response_id": "02muvajsxqf4n6q53fkck9kioqrkg9qvvfu54tih"
+            },
+            "pagination": {
+                "total_count": 0,
+                "count": 0,
+                "offset": 0
+            }
+        },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

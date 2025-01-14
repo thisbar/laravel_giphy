@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Gifs\GifByIdGetController;
+use App\Http\Controllers\Gifs\GifsGetController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware('auth:sanctum')->get('/user', function (Request $request): mixed {
     return $request->user();
+});
+
+Route::prefix('gifs')->group(function() {
+    Route::get('/search', GifsGetController::class);
+    Route::get('/{id}', GifByIdGetController::class);
 });

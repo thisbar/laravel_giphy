@@ -5,8 +5,6 @@ Feature: Search GIFs
 
     Scenario: Search GIFs with valid query
         Given I send a GET request to "/api/gifs/search?query=funny&limit=5&offset=0"
-        Then print last api response
-        Then print response headers
         Then the response status code should be 200
 
         And the response content should be:

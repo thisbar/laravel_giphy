@@ -11,12 +11,12 @@ use Mockery\MockInterface;
 
 abstract class UnitTestCase extends MockeryTestCase
 {
-	protected function mock(string $className): MockInterface
+	protected function mock(string $interface): MockInterface
 	{
-		if (class_exists($className)) {
-			return Mockery::mock($className);
+		if (interface_exists($interface)) {
+			return Mockery::mock($interface);
 		}
 
-		throw new InvalidArgumentException(sprintf('Invalid classname <%s>', $className));
+		throw new InvalidArgumentException(sprintf('Invalid interface <%s>', $interface));
 	}
 }

@@ -16,6 +16,11 @@ jobs:
 
       - run: docker compose pull
 
+      - name: Set permissions for Laravel storage
+        run: |
+          chmod -R 0777 storage
+          chmod -R 0777 bootstrap/cache
+
       - name: 🎻 Install dependencies
         run: make composer-install
 

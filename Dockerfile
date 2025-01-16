@@ -11,10 +11,24 @@ RUN apk add --no-cache \
     freetype-dev \
     icu-dev \
     libzip-dev \
-    oniguruma-dev
+    libxml2-dev \
+    gmp-dev \
+    libsodium-dev \
+    oniguruma-dev \
+    mariadb-dev
 
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo_mysql mbstring bcmath gd intl zip opcache
+RUN docker-php-ext-configure gd --with-freetype=/usr/include --with-jpeg=/usr/include \
+    && docker-php-ext-install \
+    pdo \
+    pdo_mysql \
+    mbstring \
+    bcmath \
+    gd \
+    intl \
+    zip \
+    gmp \
+    sodium \
+    xml
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 

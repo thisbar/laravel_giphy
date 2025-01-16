@@ -17,4 +17,9 @@ final class Limit extends IntValueObject
 
 		parent::__construct($value);
 	}
+
+	public static function from(int $value): static
+	{
+		return new self($value);
+	}
 }

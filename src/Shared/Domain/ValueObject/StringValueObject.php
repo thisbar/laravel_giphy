@@ -10,9 +10,16 @@ abstract class StringValueObject
 {
 	public function __construct(protected readonly string $value) {}
 
+	abstract public static function from(string $value): static;
+
 	public function value(): string
 	{
 		return $this->value;
+	}
+
+	public function __toString(): string
+	{
+		return $this->value();
 	}
 
 	protected function ensureLengthIsBetweenRange(string $value, int $min, int $max): void

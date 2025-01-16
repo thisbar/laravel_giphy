@@ -14,4 +14,9 @@ final class SearchQuery extends StringValueObject
 
 		parent::__construct($value);
 	}
+
+	public static function from(string $value): static
+	{
+		return new self($value);
+	}
 }

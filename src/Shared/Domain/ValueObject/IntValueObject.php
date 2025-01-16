@@ -10,12 +10,19 @@ abstract class IntValueObject
 {
 	public function __construct(protected readonly int $value) {}
 
+	abstract public static function from(int $value): static;
+
 	public function value(): int
 	{
 		return $this->value;
 	}
 
-	public function ensureValueIsAboveMinimum(int $value, int $min): void
+	public function __toString(): string
+	{
+		return (string) $this->value;
+	}
+
+	protected function ensureValueIsAboveMinimum(int $value, int $min): void
 	{
 		if ($value < $min) {
 			throw new InvalidArgumentException(sprintf(

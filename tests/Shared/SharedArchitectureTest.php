@@ -8,6 +8,7 @@ use LaravelGhipy\Tests\Shared\Infrastructure\ArchitectureTest;
 use PHPat\Selector\Selector;
 use PHPat\Test\Builder\Rule;
 use PHPat\Test\PHPat;
+use Ramsey\Uuid\Uuid;
 
 final class SharedArchitectureTest
 {
@@ -19,6 +20,8 @@ final class SharedArchitectureTest
 			->classes(...array_merge(ArchitectureTest::languageClasses(), [
 				// Itself
 				Selector::inNamespace('LaravelGhipy\Shared\Domain'),
+				// Dependencies treated as domain
+				Selector::classname(Uuid::class),
 			]))
 			->because('shared domain cannot import from outside');
 	}

@@ -34,7 +34,7 @@ jobs:
         run: make static-analysis
 
       - name: 🤢 Mess detector
-        run: make static-analysis
+        run: make mess-detector
 
       - name: 🏗️ Architecture
         run: make test-architecture

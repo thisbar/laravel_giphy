@@ -1,5 +1,8 @@
 <?php
 
+use LaravelGhipy\Core\Favorites\Infrastructure\Doctrine\Types\FavoriteAliasType;
+use LaravelGhipy\Core\Favorites\Infrastructure\Doctrine\Types\FavoriteIdType;
+use LaravelGhipy\Core\Gifs\Infrastructure\Doctrine\Types\GifIdType;
 use LaravelGhipy\Core\Users\Infrastructure\Doctrine\Types\EmailType;
 use LaravelGhipy\Core\Users\Infrastructure\Doctrine\Types\PasswordType;
 use LaravelGhipy\Core\Users\Infrastructure\Doctrine\Types\UserIdType;
@@ -35,6 +38,7 @@ return [
             'connection'    => env('DB_CONNECTION', 'mysql'),
             'paths'  => [
                 base_path('src/Core/Users/Infrastructure/Doctrine') => 'LaravelGhipy\Core\Users\Domain',
+                base_path('src/Core/Favorites/Infrastructure/Doctrine') => 'LaravelGhipy\Core\Favorites\Domain',
             ],
             'repository'    => Doctrine\ORM\EntityRepository::class,
 
@@ -134,9 +138,15 @@ return [
     |--------------------------------------------------------------------------
     */
     'custom_types'               => [
+        // User
         'user_id' => UserIdType::class,
         'email' => EmailType::class,
-        'password' => PasswordType::class
+        'password' => PasswordType::class,
+        // Gif
+        'gif_id' => GifIdType::class,
+        // Favorite
+        'favorite_id' => FavoriteIdType::class,
+        'favorite_alias' => FavoriteAliasType::class,
     ],
     /*
     |--------------------------------------------------------------------------

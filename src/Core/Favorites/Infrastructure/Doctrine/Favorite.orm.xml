@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                                      file:///var/www/config/doctrine-mapping.xsd">
+
+    <entity name="LaravelGhipy\Core\Favorites\Domain\Favorite" table="favorites">
+        <id name="id" type="favorite_id" column="id">
+            <generator strategy="NONE"/>
+        </id>
+        <field name="userId" type="user_id" length="36"/>
+        <field name="gifId" type="gif_id" length="36"/>
+        <field name="alias" type="favorite_alias" length="150"/>
+    </entity>
+</doctrine-mapping>

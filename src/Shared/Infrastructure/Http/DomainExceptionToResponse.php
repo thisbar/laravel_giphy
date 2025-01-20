@@ -11,6 +11,6 @@ final class DomainExceptionToResponse
 {
 	public static function toResponse(DomainError $exception): JsonResponse
 	{
-		return response()->json(['error' => $exception->getMessage()], $exception->getCode());
+		return response()->json(['error' => $exception->getMessage()], $exception->errorCode());
 	}
 }

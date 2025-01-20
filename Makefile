@@ -52,7 +52,7 @@ test:
 	@$(DOCKER_EXEC) php artisan config:cache --env=local && make clean-cache
 
 prepare-db:
-	@$(DOCKER_EXEC) php artisan db:wipe
+	@$(DOCKER_EXEC) php -d APP_ENV=testing artisan db:wipe --force
 	@$(DOCKER_EXEC) php artisan migrate
 	@$(DOCKER_EXEC) php artisan doctrine:migrations:migrate --no-interaction
 	make seed-db

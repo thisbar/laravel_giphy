@@ -5,6 +5,10 @@ namespace App\Exceptions;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Http\JsonResponse;
+use LaravelGhipy\Core\Favorites\Domain\DomainException;
+use LaravelGhipy\Shared\Domain\DomainError;
+use LaravelGhipy\Shared\Infrastructure\Http\DomainExceptionToResponse;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -30,10 +34,31 @@ class Handler extends ExceptionHandler
         });
     }
 
+    /**
+     * Customize the response for unauthenticated requests.
+     */
     protected function unauthenticated($request, AuthenticationException $exception): JsonResponse
     {
         return response()->json([
             'error' => $exception->getMessage() ?: 'Unauthorized',
         ], 401);
+    }
+
+    /**
+     * Render an exception into an HTTP response.
+     */
+    public function render($request, Throwable $exception)
+    {
+        if ($exception instanceof DomainError) {
+            return DomainExceptionToResponse::toResponse($exception);
+        }
+
+        if ($exception instanceof HttpException) {
+            return response()->json([
+                'error' => $exception->getMessage(),
+            ], $exception->getStatusCode());
+        }
+
+        return parent::render($request, $exception);
     }
 }

@@ -9,14 +9,16 @@ use LaravelGhipy\Shared\Domain\Gifs\GifId;
 
 final class GifNotFound extends DomainError
 {
+	public const HTTP_NOT_FOUND = 409;
+
 	public function __construct(private readonly GifId $id)
 	{
 		parent::__construct();
 	}
 
-	public function errorCode(): string
+	public function errorCode(): int
 	{
-		return 'gif_not_found';
+		return self::HTTP_NOT_FOUND;
 	}
 
 	protected function errorMessage(): string

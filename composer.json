@@ -8,6 +8,8 @@
         "php": "^8.1",
         "friends-of-behat/mink-extension": "^2.7",
         "guzzlehttp/guzzle": "^7.2",
+        "lambdish/phunctional": "^2.1",
+        "laravel-doctrine/migrations": "^3.3",
         "laravel-doctrine/orm": "^3.0",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",

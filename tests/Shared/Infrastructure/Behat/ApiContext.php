@@ -97,6 +97,16 @@ final class ApiContext extends RawMinkContext
 		$this->getRequestHelper()->sendRequest($method, $this->locatePath($url), ['server' => $headerArray]);
 	}
 
+	/**
+	 * @Given I send a :method request to :url as an authenticated user
+	 */
+	public function iSendARequestToAsAnAuthenticatedUser(string $method, string $url): void
+	{
+		$authorizationHeader = ['HTTP_AUTHORIZATION' => 'Bearer ' . $this->validToken];
+
+		$this->getRequestHelper()->sendRequest($method, $this->locatePath($url), ['server' => $authorizationHeader]);
+	}
+
 
 	/**
 	 * @Then the response content should be:

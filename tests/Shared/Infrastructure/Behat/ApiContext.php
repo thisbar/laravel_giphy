@@ -108,6 +108,21 @@ final class ApiContext extends RawMinkContext
 	}
 
 	/**
+	 * @Given I send a :method request to :url as an authenticated user with body:
+	 */
+	public function iSendARequestToAsAnAuthenticatedUserWithBody(string $method, string $url, PyStringNode $body): void
+	{
+		$authorizationHeader = ['HTTP_AUTHORIZATION' => 'Bearer ' . $this->validToken];
+
+		$this->getRequestHelper()->sendRequestWithPyStringNode(
+			$method,
+			$this->locatePath($url),
+			$body,
+			['server' => $authorizationHeader]
+		);
+	}
+
+	/**
 	 * @Then the response content should be:
 	 */
 	public function theResponseContentShouldBe(PyStringNode $expectedResponse): void
@@ -176,8 +191,30 @@ final class ApiContext extends RawMinkContext
 		$expected = $this->decodeJson($expectedResponse->getRaw());
 		$actual   = $this->decodeJson($this->getSessionHelper()->getResponse());
 
+		$this->validateResponse($expected, $actual);
+	}
+
+	private function validateResponse(array $expected, array $actual): void
+	{
 		foreach ($expected as $key => $value) {
+			if ($this->shouldValidateRecursively($key, $value)) {
+				$this->validateNestedData($value, $actual[$key] ?? []);
+				continue;
+			}
+
 			$this->validateKeyValue($key, $value, $actual[$key] ?? null);
+		}
+	}
+
+	private function shouldValidateRecursively(string $key, mixed $value): bool
+	{
+		return $key === 'data' && is_array($value);
+	}
+
+	private function validateNestedData(array $expectedData, array $actualData): void
+	{
+		foreach ($expectedData as $subKey => $subValue) {
+			$this->validateKeyValue($subKey, $subValue, $actualData[$subKey] ?? null);
 		}
 	}
 

@@ -15,7 +15,7 @@ composer-install: ## Install composer dependencies
 			--no-ansi
 
 start: composer-install ## Start the containers
-	@if [ ! -f .env ]; then echo '' > .env; fi
+	@if [ ! -f .env ]; then cp .env.example .env; fi
 	@docker compose up --build -d
 	@make clean-cache
 

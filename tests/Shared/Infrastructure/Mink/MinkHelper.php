@@ -23,7 +23,13 @@ final readonly class MinkHelper
 			'changeHistory' => true,
 		];
 
-		$optionalParams = array_merge($defaultOptionalParams, $optionalParams);
+		if (isset($optionalParams['content'])) {
+			$content = $optionalParams['content'];
+			unset($optionalParams['content']);
+		}
+
+		$optionalParams            = array_merge_recursive($defaultOptionalParams, $optionalParams);
+		$optionalParams['content'] = $content ?? null;
 
 		$crawler = $this->getClient()->request(
 			$method,

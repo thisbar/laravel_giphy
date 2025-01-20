@@ -29,7 +29,7 @@ destroy: ## Delete the containers, networks and volumes
 	docker compose down
 
 rebuild: ## Rebuild the containers from scratch
-	docker compose up --build --pull --force-rm --no-cache
+	docker compose build --pull --force-rm --no-cache
 	make fresh-start
 
 static-analysis: ## Runs static code analysis to check for errors, architecture violations, and code quality issues.

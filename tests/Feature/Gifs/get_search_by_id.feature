@@ -3,8 +3,9 @@ Feature: Search GIF by ID
     As a logged-in user
     I want to find an GIF by ID
 
+    @auth
     Scenario: Found an existing GIF by ID
-        Given I send a GET request to "/api/gifs/3o7ZeAiCICH5bj1Esg"
+        Given I send a GET request to "/api/gifs/3o7ZeAiCICH5bj1Esg" as an authenticated user
         Then the response status code should be 200
         And the response content should be:
         """
@@ -21,8 +22,9 @@ Feature: Search GIF by ID
         }
         """
 
+    @auth
     Scenario: Invalid GIF ID
-        Given I send a GET request to "/api/gifs/invalid-id"
+        Given I send a GET request to "/api/gifs/invalid-id" as an authenticated user
         Then the response status code should be 400
         And the response content should be:
         """
@@ -35,8 +37,9 @@ Feature: Search GIF by ID
         }
         """
 
+    @auth
     Scenario: GIF ID Not found
-        Given I send a GET request to "/api/gifs/x4gnt3b9y85l"
+        Given I send a GET request to "/api/gifs/x4gnt3b9y85l" as an authenticated user
         Then the response status code should be 404
         And the response content should be:
         """
@@ -46,5 +49,16 @@ Feature: Search GIF by ID
                 "message": "Not Found",
                 "status_code": 404
             }
+        }
+        """
+
+
+    Scenario: Search GIF while not authenticated
+        Given I send a GET request to "/api/gifs/x4gnt3b9y85l"
+        Then the response status code should be 401
+        And the response content should be:
+        """
+        {
+            "error": "Unauthenticated."
         }
         """

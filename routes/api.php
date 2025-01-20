@@ -28,7 +28,12 @@ Route::prefix('auth')->group(function() {
     Route::get('/verify-token', GetVerifyTokenController::class);
 });
 
-Route::prefix('gifs')->group(function() {
-    Route::get('/search', GifsGetController::class);
-    Route::get('/{id}', GifByIdGetController::class);
+
+Route::middleware('auth:api')->group(function () {
+    Route::prefix('gifs')->group(function() {
+        Route::get('/search', GifsGetController::class);
+        Route::get('/{id}', GifByIdGetController::class);
+    });
 });
+
+

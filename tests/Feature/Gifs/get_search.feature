@@ -3,10 +3,10 @@ Feature: Search GIFs
     As a logged-in user
     I want to search through GIFs with pagination and query
 
+    @auth
     Scenario: Search GIFs with valid query
-        Given I send a GET request to "/api/gifs/search?query=funny&limit=5&offset=0"
+        Given I send a GET request to "/api/gifs/search?query=funny&limit=5&offset=0" as an authenticated user
         Then the response status code should be 200
-
         And the response content should be:
         """
         {
@@ -34,8 +34,9 @@ Feature: Search GIFs
         }
         """
 
+    @auth
     Scenario: Search GIFs with no results
-        Given I send a GET request to "/api/gifs/search?query=no-results&limit=5&offset=0"
+        Given I send a GET request to "/api/gifs/search?query=no-results&limit=5&offset=0" as an authenticated user
         Then the response status code should be 200
         And the response content should be:
         """
@@ -50,5 +51,15 @@ Feature: Search GIFs
             "total_count": 0,
             "offset": 0
           }
+        }
+        """
+
+    Scenario: Search GIFs while not authenticated
+        Given I send a GET request to "/api/gifs/search?query=funny&limit=5&offset=0"
+        Then the response status code should be 401
+        And the response content should be:
+        """
+        {
+            "error": "Unauthenticated."
         }
         """

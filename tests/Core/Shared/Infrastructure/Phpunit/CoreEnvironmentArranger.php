@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace LaravelGhipy\Tests\Core\Shared\Infrastructure\Phpunit;
 
+use Database\Seeders\PassportSeeder;
 use Database\Seeders\UserSeeder;
 use Doctrine\ORM\EntityManager;
 use LaravelGhipy\Tests\Shared\Infrastructure\Arranger\EnvironmentArranger;
@@ -18,6 +19,7 @@ final readonly class CoreEnvironmentArranger implements EnvironmentArranger
 	public function arrange(): void
 	{
 		apply(new MySqlDatabaseCleaner(), [$this->entityManager]);
+		apply(new PassportSeeder());
 	}
 
 	public function close(): void

@@ -36,6 +36,10 @@ return [
     */
 
     'guards' => [
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'users', // Doctrine User Provider
+        ],
         'web' => [
             'driver' => 'session',
             'provider' => 'users',

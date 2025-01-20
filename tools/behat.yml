@@ -10,3 +10,7 @@ default:
       paths: [ tests/Feature/Gifs ]
       contexts:
         - LaravelGhipy\Tests\Shared\Infrastructure\Behat\ApiContext
+    auth:
+      paths: [ tests/Feature/Auth ]
+      contexts:
+        - LaravelGhipy\Tests\Shared\Infrastructure\Behat\ApiContext

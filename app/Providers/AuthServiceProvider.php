@@ -2,8 +2,11 @@
 
 namespace App\Providers;
 
-// use Illuminate\Support\Facades\Gate;
+use Doctrine\ORM\EntityManagerInterface;
+use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Auth;
+use LaravelGhipy\Core\Users\Infrastructure\PassportDoctrineUserProvider;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -21,6 +24,10 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Auth::provider('doctrine', function (Application $app) {
+            return new PassportDoctrineUserProvider(
+                $app->make(EntityManagerInterface::class)
+            );
+        });
     }
 }

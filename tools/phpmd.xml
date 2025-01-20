@@ -5,6 +5,9 @@
     <!-- Fix ExcessiveClassLength -->
     <exclude-pattern>tests/Shared/Infrastructure/Behat/ApiContext.php</exclude-pattern>
 
+    <!-- Fix ExcessiveClassLength (apply object mothers) -->
+    <exclude-pattern>tests/Core/Users/Infrastructure/PassportDoctrineUserProviderTest.php</exclude-pattern>
+
     <!-- Fix ExcessiveClassLength -->
     <!-- Fix TooManyMethods -->
     <exclude-pattern>/tests/Core/Gifs/Application/AllGifsSearcherTest.php</exclude-pattern>

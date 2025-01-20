@@ -19,6 +19,9 @@ start: composer-install ## Start the containers
 	@docker compose up --build -d
 	@make clean-cache
 
+fresh-start: start ## Start the container for first time
+	make prepare-db
+
 stop: ## Stop the containers
 	@docker compose stop
 
@@ -26,9 +29,8 @@ destroy: ## Delete the containers, networks and volumes
 	docker compose down
 
 rebuild: ## Rebuild the containers from scratch
-	docker compose build --pull --force-rm --no-cache
-	make composer-install
-	make start
+	docker compose up --build --pull --force-rm --no-cache
+	make fresh-start
 
 static-analysis: ## Runs static code analysis to check for errors, architecture violations, and code quality issues.
 	$(DOCKER_EXEC) php ./vendor/psalm/phar/psalm.phar --config ./tools/psalm.xml

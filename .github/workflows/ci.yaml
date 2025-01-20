@@ -25,7 +25,7 @@ jobs:
         run: make composer-install
 
       - name: 🐳 Start all the environment
-        run: make start
+        run: make fresh-start
 
       - name: 🔦 Lint
         run: make lint

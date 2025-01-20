@@ -49,6 +49,15 @@ test:
 	@$(DOCKER_EXEC) php ./vendor/bin/behat --format=pretty -v --config ./tools/behat.yml
 	@$(DOCKER_EXEC) php artisan config:cache --env=local && make clean-cache
 
+prepare-db:
+	@$(DOCKER_EXEC) php artisan db:wipe
+	@$(DOCKER_EXEC) php artisan migrate
+	@$(DOCKER_EXEC) php artisan doctrine:migrations:migrate --no-interaction
+	make seed-db
+
+seed-db:
+	@$(DOCKER_EXEC) php artisan db:seed
+
 ping-mysql: ## Ping the mysql service
 	@docker exec laravel_ghipy-db mysqladmin --user=laraveluser --password=secret --host "127.0.0.1" ping --silent
 

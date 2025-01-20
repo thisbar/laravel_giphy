@@ -12,7 +12,7 @@ final class PassportUserAdapter implements Authenticatable
 {
 	public readonly User $user;
 	private string $accessToken = '';
-
+  
 	public function __construct(User $user)
 	{
 		$this->user = $user;

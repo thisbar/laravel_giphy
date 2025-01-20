@@ -107,7 +107,6 @@ final class ApiContext extends RawMinkContext
 		$this->getRequestHelper()->sendRequest($method, $this->locatePath($url), ['server' => $authorizationHeader]);
 	}
 
-
 	/**
 	 * @Then the response content should be:
 	 */

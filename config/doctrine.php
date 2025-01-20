@@ -1,5 +1,9 @@
 <?php
 
+use LaravelGhipy\Core\Users\Infrastructure\Doctrine\Types\EmailType;
+use LaravelGhipy\Core\Users\Infrastructure\Doctrine\Types\PasswordType;
+use LaravelGhipy\Core\Users\Infrastructure\Doctrine\Types\UserIdType;
+
 return [
 
     /*
@@ -26,19 +30,26 @@ return [
     */
     'managers'                   => [
         'default' => [
-            'dev'           => env('APP_DEBUG', false),
-            'meta'          => env('DOCTRINE_METADATA', 'attributes'),
+            'dev'           => env('APP_DEBUG', true),
+            'meta'          => env('DOCTRINE_METADATA', 'simplified_xml'),
             'connection'    => env('DB_CONNECTION', 'mysql'),
-            'paths'         => [
-                base_path('src/Core/*/Domain')
+            'paths'  => [
+                base_path('src/Core/Users/Infrastructure/Doctrine') => 'LaravelGhipy\Core\Users\Domain',
             ],
-
             'repository'    => Doctrine\ORM\EntityRepository::class,
 
             'proxies'       => [
                 'namespace'     => 'DoctrineProxies',
                 'path'          => storage_path('proxies'),
                 'auto_generate' => env('DOCTRINE_PROXY_AUTOGENERATE', false)
+            ],
+
+            'table_storage' => [
+                'table_name' => 'doctrine_migrations',
+                'version_column_name' => 'version',
+                'version_column_length' => 1024,
+                'executed_at_column_name' => 'executed_at',
+                'execution_time_column_name' => 'execution_time',
             ],
 
             /*
@@ -123,6 +134,9 @@ return [
     |--------------------------------------------------------------------------
     */
     'custom_types'               => [
+        'user_id' => UserIdType::class,
+        'email' => EmailType::class,
+        'password' => PasswordType::class
     ],
     /*
     |--------------------------------------------------------------------------

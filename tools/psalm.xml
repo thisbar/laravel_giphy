@@ -23,6 +23,7 @@
         <PropertyNotSetInConstructor>
             <errorLevel type="suppress">
                 <directory name="tests"/>
+                <directory name="database"/>
             </errorLevel>
         </PropertyNotSetInConstructor>
         <PossiblyUndefinedMethod>
@@ -47,5 +48,10 @@
                 <file name="tests/Shared/Infrastructure/Mink/MinkHelper.php"/>
             </errorLevel>
         </UndefinedInterfaceMethod>
+        <UndefinedClass>
+            <errorLevel type="suppress">
+                <directory name="config"/>
+            </errorLevel>
+        </UndefinedClass>
     </issueHandlers>
 </psalm>

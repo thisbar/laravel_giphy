@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace LaravelGhipy\Tests\Core\Shared\Infrastructure\Phpunit;
 
+use Database\Seeders\UserSeeder;
 use Doctrine\ORM\EntityManager;
 use LaravelGhipy\Tests\Shared\Infrastructure\Arranger\EnvironmentArranger;
 use LaravelGhipy\Tests\Shared\Infrastructure\Doctrine\MySqlDatabaseCleaner;
@@ -19,5 +20,8 @@ final readonly class CoreEnvironmentArranger implements EnvironmentArranger
 		apply(new MySqlDatabaseCleaner(), [$this->entityManager]);
 	}
 
-	public function close(): void {}
+	public function close(): void
+	{
+		apply(new UserSeeder($this->entityManager));
+	}
 }

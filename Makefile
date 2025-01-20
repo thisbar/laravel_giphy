@@ -3,7 +3,7 @@ CURRENT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 PHP_CONTAINER := $(PROJECT_NAME)-php
 DOCKER_EXEC := docker exec -t --user=$(id -u):$(id -g) $(PHP_CONTAINER)
 
-.PHONY: help
+.PHONY: help build
 
 help: ## Print this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
@@ -28,9 +28,11 @@ stop: ## Stop the containers
 destroy: ## Delete the containers, networks and volumes
 	docker compose down
 
-rebuild: ## Rebuild the containers from scratch
+build: ## Rebuild the containers from scratch
 	docker compose build --pull --force-rm --no-cache
 	make fresh-start
+	$(DOCKER_EXEC) php artisan key:generate
+	$(DOCKER_EXEC) php artisan passport:install
 
 static-analysis: ## Runs static code analysis to check for errors, architecture violations, and code quality issues.
 	$(DOCKER_EXEC) php ./vendor/psalm/phar/psalm.phar --config ./tools/psalm.xml

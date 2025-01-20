@@ -1,5 +1,8 @@
 <?php
 
+use App\Providers\JwtServiceProvider;
+use App\Providers\PassportServiceProvider;
+use App\Providers\UserServiceProvider;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
@@ -70,7 +73,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('APP_TIMEZONE', 'America/Argentina/Buenos_Aires'),
 
     /*
     |--------------------------------------------------------------------------
@@ -168,6 +171,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        LaravelDoctrine\ORM\DoctrineServiceProvider::class,
+        LaravelDoctrine\Migrations\MigrationsServiceProvider::class,
+        UserServiceProvider::class,
+        PassportServiceProvider::class,
+        JwtServiceProvider::class,
     ])->toArray(),
 
     /*

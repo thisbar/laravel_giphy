@@ -14,3 +14,7 @@ default:
       paths: [ tests/Feature/Auth ]
       contexts:
         - LaravelGhipy\Tests\Shared\Infrastructure\Behat\ApiContext
+    favorites:
+      paths: [ tests/Feature/Favorites ]
+      contexts:
+        - LaravelGhipy\Tests\Shared\Infrastructure\Behat\ApiContext

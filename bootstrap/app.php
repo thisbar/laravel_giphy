@@ -11,6 +11,8 @@
 |
 */
 
+use LaravelGhipy\Core\Favorites\Domain\FavoriteRepository;
+use LaravelGhipy\Core\Favorites\Infrastructure\Doctrine\DoctrineFavoriteRepository;
 use LaravelGhipy\Core\Gifs\Domain\GifsRepository;
 use LaravelGhipy\Core\Gifs\Infrastructure\GhipyGifsRepository;
 use LaravelGhipy\Shared\Domain\HttpClient;
@@ -48,6 +50,7 @@ $app->singleton(
 
 $app->bind(HttpClient::class, LaravelHttpClient::class);
 $app->bind(GifsRepository::class, GhipyGifsRepository::class);
+$app->bind(FavoriteRepository::class, DoctrineFavoriteRepository::class);
 
 /*
 |--------------------------------------------------------------------------

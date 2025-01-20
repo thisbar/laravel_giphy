@@ -25,7 +25,7 @@ jobs:
         run: make composer-install
 
       - name: 🐳 Start all the environment
-        run: make fresh-start
+        run: make start
 
       - name: 🔦 Lint
         run: make lint
@@ -45,6 +45,9 @@ jobs:
               echo "Waiting for database connection..."
               sleep 2
           done
+
+      - name: 🐬 Prepare the database
+        run: make prepare-db
 
       - name: ✅ Run the tests
         run: make test

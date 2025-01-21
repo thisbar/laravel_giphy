@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Core\Favorites\Infrastructure;
+namespace LaravelGiphy\Tests\Core\Favorites\Infrastructure;
 
 use Doctrine\ORM\EntityManagerInterface;
-use LaravelGhipy\Core\Favorites\Domain\Favorite;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteAlias;
-use LaravelGhipy\Core\Favorites\Infrastructure\Doctrine\DoctrineFavoriteRepository;
-use LaravelGhipy\Shared\Domain\Favorites\FavoriteId;
-use LaravelGhipy\Shared\Domain\Gifs\GifId;
-use LaravelGhipy\Shared\Domain\Users\UserId;
-use LaravelGhipy\Tests\Core\Shared\Infrastructure\Phpunit\CoreInfrastructureTestCase;
+use LaravelGiphy\Core\Favorites\Domain\Favorite;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteAlias;
+use LaravelGiphy\Core\Favorites\Infrastructure\Doctrine\DoctrineFavoriteRepository;
+use LaravelGiphy\Shared\Domain\Favorites\FavoriteId;
+use LaravelGiphy\Shared\Domain\Gifs\GifId;
+use LaravelGiphy\Shared\Domain\Users\UserId;
+use LaravelGiphy\Tests\Core\Shared\Infrastructure\Phpunit\CoreInfrastructureTestCase;
 
 final class DoctrineFavoriteRepositoryTest extends CoreInfrastructureTestCase
 {

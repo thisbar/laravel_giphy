@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Favorites\Infrastructure\Doctrine\Types;
+namespace LaravelGiphy\Core\Favorites\Infrastructure\Doctrine\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Type;
-use LaravelGhipy\Shared\Domain\Favorites\FavoriteId;
+use LaravelGiphy\Shared\Domain\Favorites\FavoriteId;
 
 final class FavoriteIdType extends Type
 {

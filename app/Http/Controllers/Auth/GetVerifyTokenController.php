@@ -7,8 +7,8 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Laravel\Passport\TokenRepository;
-use LaravelGhipy\Core\Auth\Infrastructure\TokenValidator;
-use LaravelGhipy\Core\Users\Domain\UserRepository;
+use LaravelGiphy\Core\Auth\Infrastructure\TokenValidator;
+use LaravelGiphy\Core\Users\Domain\UserRepository;
 use Lcobucci\JWT\Configuration;
 
 final class GetVerifyTokenController extends Controller

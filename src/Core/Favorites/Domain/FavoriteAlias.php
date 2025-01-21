@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Favorites\Domain;
+namespace LaravelGiphy\Core\Favorites\Domain;
 
-use LaravelGhipy\Shared\Domain\ValueObject\StringValueObject;
+use LaravelGiphy\Shared\Domain\ValueObject\StringValueObject;
 
 final class FavoriteAlias extends StringValueObject
 {

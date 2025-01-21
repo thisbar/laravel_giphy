@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Audit\Infrastructure;
+namespace LaravelGiphy\Core\Audit\Infrastructure;
 
 use Elastic\Elasticsearch\Client;
-use LaravelGhipy\Core\Audit\Domain\AuditLog;
-use LaravelGhipy\Core\Audit\Domain\AuditLogRepository;
+use LaravelGiphy\Core\Audit\Domain\AuditLog;
+use LaravelGiphy\Core\Audit\Domain\AuditLogRepository;
 
 final class ElasticsearchAuditLogRepository implements AuditLogRepository
 {

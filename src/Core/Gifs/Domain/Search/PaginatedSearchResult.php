@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Gifs\Domain\Search;
+namespace LaravelGiphy\Core\Gifs\Domain\Search;
 
-use LaravelGhipy\Core\Gifs\Domain\GifCollection;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\Pagination;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\SearchMetadata;
+use LaravelGiphy\Core\Gifs\Domain\GifCollection;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\Pagination;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\SearchMetadata;
 
 final class PaginatedSearchResult extends SearchResult
 {

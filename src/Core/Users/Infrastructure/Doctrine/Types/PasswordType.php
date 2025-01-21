@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Users\Infrastructure\Doctrine\Types;
+namespace LaravelGiphy\Core\Users\Infrastructure\Doctrine\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Type;
 use InvalidArgumentException;
-use LaravelGhipy\Core\Users\Domain\Password;
+use LaravelGiphy\Core\Users\Domain\Password;
 
 final class PasswordType extends Type
 {

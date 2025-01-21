@@ -5,9 +5,9 @@ namespace App\Exceptions;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Http\JsonResponse;
-use LaravelGhipy\Core\Favorites\Domain\DomainException;
-use LaravelGhipy\Shared\Domain\DomainError;
-use LaravelGhipy\Shared\Infrastructure\Http\DomainExceptionToResponse;
+use LaravelGiphy\Core\Favorites\Domain\DomainException;
+use LaravelGiphy\Shared\Domain\DomainError;
+use LaravelGiphy\Shared\Infrastructure\Http\DomainExceptionToResponse;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Throwable;
 

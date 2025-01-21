@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Gifs\Application;
+namespace LaravelGiphy\Core\Gifs\Application;
 
-use LaravelGhipy\Core\Gifs\Domain\GifsRepository;
-use LaravelGhipy\Core\Gifs\Domain\Search\SearchResult;
-use LaravelGhipy\Shared\Domain\Gifs\GifId;
+use LaravelGiphy\Core\Gifs\Domain\GifsRepository;
+use LaravelGiphy\Core\Gifs\Domain\Search\SearchResult;
+use LaravelGiphy\Shared\Domain\Gifs\GifId;
 
 final class GifFinder
 {

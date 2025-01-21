@@ -1,11 +1,11 @@
 <?php
 
-use LaravelGhipy\Core\Favorites\Infrastructure\Doctrine\Types\FavoriteAliasType;
-use LaravelGhipy\Core\Favorites\Infrastructure\Doctrine\Types\FavoriteIdType;
-use LaravelGhipy\Core\Gifs\Infrastructure\Doctrine\Types\GifIdType;
-use LaravelGhipy\Core\Users\Infrastructure\Doctrine\Types\EmailType;
-use LaravelGhipy\Core\Users\Infrastructure\Doctrine\Types\PasswordType;
-use LaravelGhipy\Core\Users\Infrastructure\Doctrine\Types\UserIdType;
+use LaravelGiphy\Core\Favorites\Infrastructure\Doctrine\Types\FavoriteAliasType;
+use LaravelGiphy\Core\Favorites\Infrastructure\Doctrine\Types\FavoriteIdType;
+use LaravelGiphy\Core\Gifs\Infrastructure\Doctrine\Types\GifIdType;
+use LaravelGiphy\Core\Users\Infrastructure\Doctrine\Types\EmailType;
+use LaravelGiphy\Core\Users\Infrastructure\Doctrine\Types\PasswordType;
+use LaravelGiphy\Core\Users\Infrastructure\Doctrine\Types\UserIdType;
 
 return [
 
@@ -37,8 +37,8 @@ return [
             'meta'          => env('DOCTRINE_METADATA', 'simplified_xml'),
             'connection'    => env('DB_CONNECTION', 'mysql'),
             'paths'  => [
-                base_path('src/Core/Users/Infrastructure/Doctrine') => 'LaravelGhipy\Core\Users\Domain',
-                base_path('src/Core/Favorites/Infrastructure/Doctrine') => 'LaravelGhipy\Core\Favorites\Domain',
+                base_path('src/Core/Users/Infrastructure/Doctrine') => 'LaravelGiphy\Core\Users\Domain',
+                base_path('src/Core/Favorites/Infrastructure/Doctrine') => 'LaravelGiphy\Core\Favorites\Domain',
             ],
             'repository'    => Doctrine\ORM\EntityRepository::class,
 

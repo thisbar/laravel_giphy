@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Feature;
+namespace LaravelGiphy\Tests\Feature;
 
 // use Illuminate\Foundation\Testing\RefreshDatabase;
-use LaravelGhipy\Tests\TestCase;
+use LaravelGiphy\Tests\TestCase;
 
 final class ExampleTest extends TestCase
 {

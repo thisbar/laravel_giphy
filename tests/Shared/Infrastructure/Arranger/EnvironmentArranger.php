@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Shared\Infrastructure\Arranger;
+namespace LaravelGiphy\Tests\Shared\Infrastructure\Arranger;
 
 interface EnvironmentArranger
 {

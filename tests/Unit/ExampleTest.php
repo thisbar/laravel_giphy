@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Unit;
+namespace LaravelGiphy\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 

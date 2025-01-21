@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Users\Infrastructure;
+namespace LaravelGiphy\Core\Users\Infrastructure;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\UserProvider;
-use LaravelGhipy\Core\Users\Domain\User;
+use LaravelGiphy\Core\Users\Domain\User;
 
 final class PassportDoctrineUserProvider implements UserProvider
 {

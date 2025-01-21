@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Shared\Infrastructure;
+namespace LaravelGiphy\Tests\Shared\Infrastructure;
 
 use ArrayIterator;
 use BackedEnum;

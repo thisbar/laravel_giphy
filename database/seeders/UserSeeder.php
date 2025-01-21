@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Illuminate\Database\Seeder;
-use LaravelGhipy\Core\Users\Domain\Email;
-use LaravelGhipy\Core\Users\Domain\Password;
-use LaravelGhipy\Core\Users\Domain\User;
+use LaravelGiphy\Core\Users\Domain\Email;
+use LaravelGiphy\Core\Users\Domain\Password;
+use LaravelGiphy\Core\Users\Domain\User;
 
 class UserSeeder extends Seeder
 {

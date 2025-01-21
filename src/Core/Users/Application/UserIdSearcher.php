@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Users\Application;
+namespace LaravelGiphy\Core\Users\Application;
 
-use LaravelGhipy\Core\Users\Domain\User;
-use LaravelGhipy\Core\Users\Domain\UserRepository;
-use LaravelGhipy\Shared\Domain\Users\UserId;
+use LaravelGiphy\Core\Users\Domain\User;
+use LaravelGiphy\Core\Users\Domain\UserRepository;
+use LaravelGiphy\Shared\Domain\Users\UserId;
 
 final class UserIdSearcher
 {

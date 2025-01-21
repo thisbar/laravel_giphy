@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Core\Users\Infrastructure;
+namespace LaravelGiphy\Tests\Core\Users\Infrastructure;
 
-use LaravelGhipy\Core\Users\Domain\Email;
-use LaravelGhipy\Core\Users\Domain\Password;
-use LaravelGhipy\Core\Users\Domain\User;
-use LaravelGhipy\Core\Users\Infrastructure\PassportUserAdapter;
-use LaravelGhipy\Shared\Domain\Users\UserId;
+use LaravelGiphy\Core\Users\Domain\Email;
+use LaravelGiphy\Core\Users\Domain\Password;
+use LaravelGiphy\Core\Users\Domain\User;
+use LaravelGiphy\Core\Users\Infrastructure\PassportUserAdapter;
+use LaravelGiphy\Shared\Domain\Users\UserId;
 use PHPUnit\Framework\TestCase;
 
 final class PassportUserAdapterTest extends TestCase

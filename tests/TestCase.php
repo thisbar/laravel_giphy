@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests;
+namespace LaravelGiphy\Tests;
 
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 

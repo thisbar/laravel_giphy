@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Users\Infrastructure;
+namespace LaravelGiphy\Core\Users\Infrastructure;
 
 use Doctrine\ORM\EntityManagerInterface;
-use LaravelGhipy\Core\Users\Domain\Email;
-use LaravelGhipy\Core\Users\Domain\User;
-use LaravelGhipy\Core\Users\Domain\UserRepository;
-use LaravelGhipy\Shared\Domain\Users\UserId;
+use LaravelGiphy\Core\Users\Domain\Email;
+use LaravelGiphy\Core\Users\Domain\User;
+use LaravelGiphy\Core\Users\Domain\UserRepository;
+use LaravelGiphy\Shared\Domain\Users\UserId;
 
 final class DoctrineUserRepository implements UserRepository
 {

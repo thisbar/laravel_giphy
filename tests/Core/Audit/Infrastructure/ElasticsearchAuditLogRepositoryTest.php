@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Core\Audit\Infrastructure;
+namespace LaravelGiphy\Tests\Core\Audit\Infrastructure;
 
 use DateTimeImmutable;
 use Elastic\Elasticsearch\Client;
-use LaravelGhipy\Core\Audit\Domain\AuditLog;
-use LaravelGhipy\Core\Audit\Infrastructure\ElasticsearchAuditLogRepository;
-use LaravelGhipy\Tests\Core\Shared\Infrastructure\Phpunit\CoreInfrastructureTestCase;
+use LaravelGiphy\Core\Audit\Domain\AuditLog;
+use LaravelGiphy\Core\Audit\Infrastructure\ElasticsearchAuditLogRepository;
+use LaravelGiphy\Tests\Core\Shared\Infrastructure\Phpunit\CoreInfrastructureTestCase;
 
 final class ElasticsearchAuditLogRepositoryTest extends CoreInfrastructureTestCase
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Gifs\Domain;
+namespace LaravelGiphy\Core\Gifs\Domain;
 
-use LaravelGhipy\Shared\Domain\DomainError;
-use LaravelGhipy\Shared\Domain\Gifs\GifId;
+use LaravelGiphy\Shared\Domain\DomainError;
+use LaravelGiphy\Shared\Domain\Gifs\GifId;
 
 final class GifNotFound extends DomainError
 {

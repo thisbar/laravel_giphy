@@ -6,7 +6,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Auth;
-use LaravelGhipy\Core\Users\Infrastructure\PassportDoctrineUserProvider;
+use LaravelGiphy\Core\Users\Infrastructure\PassportDoctrineUserProvider;
 
 class AuthServiceProvider extends ServiceProvider
 {

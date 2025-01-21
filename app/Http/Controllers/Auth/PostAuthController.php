@@ -6,10 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Laravel\Passport\PersonalAccessTokenFactory;
-use LaravelGhipy\Core\Auth\Infrastructure\TokenGenerator;
-use LaravelGhipy\Core\Users\Application\UserAuthenticator;
-use LaravelGhipy\Core\Users\Domain\Email;
-use LaravelGhipy\Core\Users\Domain\UserRepository;
+use LaravelGiphy\Core\Auth\Infrastructure\TokenGenerator;
+use LaravelGiphy\Core\Users\Application\UserAuthenticator;
+use LaravelGiphy\Core\Users\Domain\Email;
+use LaravelGiphy\Core\Users\Domain\UserRepository;
 use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 final class PostAuthController extends Controller

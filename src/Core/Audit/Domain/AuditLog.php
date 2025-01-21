@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Audit\Domain;
+namespace LaravelGiphy\Core\Audit\Domain;
 
 use DateTimeImmutable;
 

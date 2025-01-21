@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Auth\Infrastructure;
+namespace LaravelGiphy\Core\Auth\Infrastructure;
 
 use Carbon\Carbon;
 use Laravel\Passport\PersonalAccessTokenFactory;
-use LaravelGhipy\Core\Users\Domain\User;
+use LaravelGiphy\Core\Users\Domain\User;
 
 final class TokenGenerator
 {

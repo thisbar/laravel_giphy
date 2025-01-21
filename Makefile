@@ -1,4 +1,4 @@
-PROJECT_NAME := laravel_ghipy
+PROJECT_NAME := laravel_giphy
 CURRENT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 PHP_CONTAINER := $(PROJECT_NAME)-php
 DOCKER_EXEC := docker exec -t --user=$(id -u):$(id -g) $(PHP_CONTAINER)
@@ -64,7 +64,7 @@ seed-db:
 	@$(DOCKER_EXEC) php artisan db:seed
 
 ping-mysql: ## Ping the mysql service
-	@docker exec laravel_ghipy-db mysqladmin --user=laraveluser --password=secret --host "127.0.0.1" ping --silent
+	@docker exec laravel_giphy-db mysqladmin --user=laraveluser --password=secret --host "127.0.0.1" ping --silent
 
 clean-cache: ## Clean app cache
 	@$(DOCKER_EXEC) php artisan cache:clear

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Shared\Infrastructure\PhpUnit;
+namespace LaravelGiphy\Tests\Shared\Infrastructure\PhpUnit;
 
 use Elastic\Elasticsearch\Client;
-use LaravelGhipy\Tests\TestCase;
+use LaravelGiphy\Tests\TestCase;
 
 abstract class InfrastructureTestCase extends TestCase
 {

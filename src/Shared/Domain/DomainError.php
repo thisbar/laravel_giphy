@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Shared\Domain;
+namespace LaravelGiphy\Shared\Domain;
 
 use DomainException;
 

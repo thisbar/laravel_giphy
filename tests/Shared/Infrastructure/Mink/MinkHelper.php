@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Shared\Infrastructure\Mink;
+namespace LaravelGiphy\Tests\Shared\Infrastructure\Mink;
 
 use Behat\Mink\Driver\DriverInterface;
 use Behat\Mink\Session;

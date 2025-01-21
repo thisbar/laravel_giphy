@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Favorites\Application;
+namespace LaravelGiphy\Core\Favorites\Application;
 
-use LaravelGhipy\Core\Favorites\Domain\Favorite;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteAliasUniquenessValidator;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteRepository;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteUniquenessValidator;
+use LaravelGiphy\Core\Favorites\Domain\Favorite;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteAliasUniquenessValidator;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteRepository;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteUniquenessValidator;
 
 final class FavoriteSaver
 {

@@ -66,7 +66,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'doctrine',
-            'model' => LaravelGhipy\Core\Users\Domain\User::class,
+            'model' => LaravelGiphy\Core\Users\Domain\User::class,
         ],
 
         // 'users' => [

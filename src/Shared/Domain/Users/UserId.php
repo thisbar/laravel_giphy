@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Shared\Domain\Users;
+namespace LaravelGiphy\Shared\Domain\Users;
 
-use LaravelGhipy\Shared\Domain\ValueObject\Uuid;
+use LaravelGiphy\Shared\Domain\ValueObject\Uuid;
 
 final class UserId extends Uuid
 {

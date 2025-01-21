@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Shared\Infrastructure\Doctrine;
+namespace LaravelGiphy\Tests\Shared\Infrastructure\Doctrine;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\ORM\EntityManagerInterface;

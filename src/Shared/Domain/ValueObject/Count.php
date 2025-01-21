@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Shared\Domain\ValueObject;
+namespace LaravelGiphy\Shared\Domain\ValueObject;
 
 final class Count extends IntValueObject
 {

@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Core\Auth\Infrastructure;
+namespace LaravelGiphy\Tests\Core\Auth\Infrastructure;
 
 use Carbon\Carbon;
 use Laravel\Passport\PersonalAccessTokenFactory;
 use Laravel\Passport\PersonalAccessTokenResult;
 use Laravel\Passport\Token;
-use LaravelGhipy\Core\Auth\Infrastructure\TokenGenerator;
-use LaravelGhipy\Core\Users\Domain\Email;
-use LaravelGhipy\Core\Users\Domain\Password;
-use LaravelGhipy\Core\Users\Domain\User;
-use LaravelGhipy\Tests\TestCase;
+use LaravelGiphy\Core\Auth\Infrastructure\TokenGenerator;
+use LaravelGiphy\Core\Users\Domain\Email;
+use LaravelGiphy\Core\Users\Domain\Password;
+use LaravelGiphy\Core\Users\Domain\User;
+use LaravelGiphy\Tests\TestCase;
 use Mockery;
 use Mockery\MockInterface;
 

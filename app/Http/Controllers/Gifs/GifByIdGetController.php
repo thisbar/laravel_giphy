@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Gifs;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
-use LaravelGhipy\Core\Gifs\Application\GifFinder;
-use LaravelGhipy\Core\Gifs\Domain\GifsRepository;
-use LaravelGhipy\Shared\Domain\Gifs\GifId;
+use LaravelGiphy\Core\Gifs\Application\GifFinder;
+use LaravelGiphy\Core\Gifs\Domain\GifsRepository;
+use LaravelGiphy\Shared\Domain\Gifs\GifId;
 
 final class GifByIdGetController extends Controller
 {

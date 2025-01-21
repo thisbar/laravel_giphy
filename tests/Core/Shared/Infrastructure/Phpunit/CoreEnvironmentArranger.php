@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Core\Shared\Infrastructure\Phpunit;
+namespace LaravelGiphy\Tests\Core\Shared\Infrastructure\Phpunit;
 
 use Database\Seeders\PassportSeeder;
 use Database\Seeders\UserSeeder;
 use Doctrine\ORM\EntityManager;
 use Elastic\Elasticsearch\Client as ElasticsearchClient;
-use LaravelGhipy\Tests\Shared\Infrastructure\Arranger\EnvironmentArranger;
-use LaravelGhipy\Tests\Shared\Infrastructure\Doctrine\MySqlDatabaseCleaner;
-use LaravelGhipy\Tests\Shared\Infrastructure\Elastic\ElasticDatabaseCleaner;
+use LaravelGiphy\Tests\Shared\Infrastructure\Arranger\EnvironmentArranger;
+use LaravelGiphy\Tests\Shared\Infrastructure\Doctrine\MySqlDatabaseCleaner;
+use LaravelGiphy\Tests\Shared\Infrastructure\Elastic\ElasticDatabaseCleaner;
 
 use function Lambdish\Phunctional\apply;
 

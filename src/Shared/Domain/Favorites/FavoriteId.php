@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Shared\Domain\Favorites;
+namespace LaravelGiphy\Shared\Domain\Favorites;
 
-use LaravelGhipy\Shared\Domain\ValueObject\Uuid;
+use LaravelGiphy\Shared\Domain\ValueObject\Uuid;
 
 final class FavoriteId extends Uuid
 {

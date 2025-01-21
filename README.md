@@ -2,7 +2,7 @@
 
 ![PHP Version](https://img.shields.io/badge/PHP-%3E%3D8.2-8892BF.svg)
 ![Laravel Version](https://img.shields.io/badge/Laravel-10.x-F05340.svg)
-![CI Build](https://github.com/thisbar/laravel_ghipy/actions/workflows/ci.yml/badge.svg)
+![CI Build](https://github.com/thisbar/laravel_ghipy/actions/workflows/ci.yaml/badge.svg)
 ![Coverage](https://img.shields.io/codecov/c/github/thisbar/laravel_ghipy)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen)

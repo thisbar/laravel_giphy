@@ -6,6 +6,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "ext-pdo": "*",
+        "elasticsearch/elasticsearch": "^8.17",
         "friends-of-behat/mink-extension": "^2.7",
         "guzzlehttp/guzzle": "^7.2",
         "lambdish/phunctional": "^2.1",
@@ -16,8 +18,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "nyholm/psr7": "^1.8",
-        "symfony/http-client": "*",
-        "ext-pdo": "*"
+        "symfony/http-client": "*"
     },
     "require-dev": {
         "behat/behat": "^3.18",

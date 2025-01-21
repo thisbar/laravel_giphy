@@ -1,5 +1,6 @@
 <?php
 
+use App\Providers\ElasticsearchServiceProvider;
 use App\Providers\JwtServiceProvider;
 use App\Providers\PassportServiceProvider;
 use App\Providers\UserServiceProvider;
@@ -176,6 +177,7 @@ return [
         UserServiceProvider::class,
         PassportServiceProvider::class,
         JwtServiceProvider::class,
+        ElasticsearchServiceProvider::class,
     ])->toArray(),
 
     /*

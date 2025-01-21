@@ -50,7 +50,8 @@ test-architecture:
 test:
 	$(DOCKER_EXEC) php artisan config:cache --env=testing
 	@mkdir -p build/test_results/phpunit
-	@$(DOCKER_EXEC) php ./vendor/bin/phpunit --testdox --exclude-group='disabled' -c ./tools/phpunit.xml
+	@$(DOCKER_EXEC) php vendor/bin/paratest --testdox --testsuite CoreParallel --exclude-group='disabled' -c ./tools/phpunit.xml
+	@$(DOCKER_EXEC) php vendor/bin/phpunit --testdox --testsuite Core --exclude-group='disabled' -c ./tools/phpunit.xml
 	@$(DOCKER_EXEC) php ./vendor/bin/behat --format=pretty -v --config ./tools/behat.yml
 	@$(DOCKER_EXEC) php artisan config:cache --env=local && make clean-cache
 

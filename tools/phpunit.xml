@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="../vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="../vendor/autoload.php"
@@ -15,10 +14,14 @@
 >
     <testsuites>
         <testsuite name="Core">
-            <directory>../tests/Core</directory>
+            <directory>../tests/Core/*/Infrastructure</directory>
             <exclude>../tests/Core/CoreArchitectureTest.php</exclude>
         </testsuite>
-
+        <testsuite name="CoreParallel">
+            <directory>../tests/Core</directory>
+            <exclude>../tests/Core/*/Infrastructure</exclude>
+            <exclude>../tests/Core/CoreArchitectureTest.php</exclude>
+        </testsuite>
     </testsuites>
     <source>
         <include>
@@ -29,8 +32,6 @@
         <env name="APP_ENV" value="testing"/>
         <env name="BCRYPT_ROUNDS" value="4"/>
         <env name="CACHE_DRIVER" value="array"/>
-        <!-- <env name="DB_CONNECTION" value="sqlite"/> -->
-        <!-- <env name="DB_DATABASE" value=":memory:"/> -->
         <env name="MAIL_MAILER" value="array"/>
         <env name="PULSE_ENABLED" value="false"/>
         <env name="QUEUE_CONNECTION" value="sync"/>

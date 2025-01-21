@@ -13,6 +13,7 @@ composer-install: ## Install composer dependencies
 		composer:2.8.4 install \
 			--ignore-platform-reqs \
 			--no-ansi
+	$(DOCKER_EXEC) composer dump autoload -o
 
 start: composer-install ## Start the containers
 	@if [ ! -f .env ]; then cp .env.example .env; fi

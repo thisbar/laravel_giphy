@@ -1,0 +1,14 @@
+@startuml
+actor Usuario
+
+participant "GifsController" as Controller
+participant "AllGifsSearcher" as Service
+participant "Giphy API" as Giphy
+
+Usuario -> Controller: GET /gifs?query=<search_query>
+Controller -> Service: searchAllGifs(query)
+Service -> Giphy: search(query)
+Giphy --> Service: GifResults
+Service --> Controller: GifResults
+Controller --> Usuario: HTTP 200 OK + GifResults
+@enduml

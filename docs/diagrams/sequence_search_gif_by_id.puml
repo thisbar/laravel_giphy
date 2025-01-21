@@ -1,0 +1,14 @@
+@startuml
+actor Usuario
+
+participant "GifsController" as Controller
+participant "GifFinder" as Service
+participant "Giphy API" as Giphy
+
+Usuario -> Controller: GET /gifs/{id}
+Controller -> Service: findGifById(gifId)
+Service -> Giphy: fetchGifById(gifId)
+Giphy --> Service: GifDetails
+Service --> Controller: GifDetails
+Controller --> Usuario: HTTP 200 OK + GifDetails
+@enduml

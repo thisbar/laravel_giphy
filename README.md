@@ -1,66 +1,171 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel 10 Giphy
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![PHP Version](https://img.shields.io/badge/PHP-%3E%3D8.2-8892BF.svg)
+![Laravel Version](https://img.shields.io/badge/Laravel-10.x-F05340.svg)
+![CI Build](https://github.com/thisbar/laravel_ghipy/actions/workflows/ci.yml/badge.svg)
+![Coverage](https://img.shields.io/codecov/c/github/thisbar/laravel_ghipy)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen)
 
-## About Laravel
+## 📋 Descripción
+Este proyecto está desarrollado en Laravel 10 siguiendo principios de arquitectura hexagonal, aplicando las mejores prácticas de desarrollo como SOLID, DRY, y Tell, Don't Ask. Integra un flujo de trabajo robusto con herramientas modernas para garantizar calidad de código, CI/CD y monitoreo.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Tecnologías y Herramientas
+- Laravel 10
+- Docker
+- Arquitectura Hexagonal
+- Doctrine ORM con patrón Repository
+- Elasticsearch con Kibana
+- ECS (Easy Coding Standard), PSALM, PHPStan, PHPUnit, PHPMD, PHPAT
+- GrumPHP para proteger los commits
+- Behat para tests de aceptación
+- PHPUnit para tests de integración y unitarios
+- Passport para OAuth2
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📂 Estructura del Proyecto
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Dentro de la carpeta `src` se encuentra el Bounded Context `Core`.
 
-## Learning Laravel
+Dentro del BC se encontraran los distintos modulos que contendran a su vez las distintas capas de la aplicacion.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+La arquitectura hexagonal organiza el código en capas claramente separadas:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Domain**: Contiene la lógica de negocio.
+- **Application**: Implementa casos de uso y orquesta la interacción entre capas.
+- **Infrastructure**: Gestiona I/O: frameworks, librerías, y conexiones externas (DB, API, etc.).
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+La carpeta `Shared` se utiliza para elementos compartidos entre distintos contextos, modulos o capas.
 
-## Laravel Sponsors
+## 🛠️ Requisitos Previos
+- Docker y Docker Compose instalados.
+- Make instalado en el sistema.
+- Navegador para acceder a Kibana.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🏗️ Levantar el Proyecto
+Usa los siguientes comandos para gestionar el entorno:
 
-### Premium Partners
+```bash
+help                 Print this help
+composer-install     Install composer dependencies
+start                Start the containers
+fresh-start          Start the container for first time
+stop                 Stop the containers
+destroy              Delete the containers, networks and volumes
+build                Rebuild the containers from scratch
+static-analysis      Runs static code analysis to check for errors, architecture violations, and code quality issues.
+mess-detector        Checks code for dirty code
+lint                 Runs the linter to check for code style violations
+ping-mysql           Ping the mysql service
+clean-cache          Clean app cache
+shell                Enter shell php container
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Primer Inicio
 
-## Contributing
+```bash
+make fresh-start
+```
+Esto ejecutará los siguientes pasos automáticamente:
+- Construir los contenedores de Docker (incluyendo Laravel, MySQL, Wiremock, Elasticsearch y Kibana).
+- Instalar las dependencias con Composer.
+- Configurar las bases de datos y migrar las tablas.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## ✅ Calidad de Código
+Este proyecto utiliza herramientas avanzadas para garantizar calidad y consistencia del código:
 
-## Code of Conduct
+- **ECS (Easy Coding Standard)**: Asegura el cumplimiento de estándares de código.
+- **Psalm y Phpmd**: Análisis estático del código.
+- **PHPAT**: Pruebas de arquitectura para verificar la adherencia a la arquitectura hexagonal (regla de dependencia).
+- **GrumPHP**: Protege los commits ejecutando las herramientas antes mencionadas previo aceptar cambios.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Ejecutar análisis:
+```bash
+make static-analysis   # Análisis estático y de arquitectura
+make mess-detector     # Detectar código "sucio"
+make lint              # Verificar el estilo de código
+make test-architecture # Verifica la infrastructura
+```
 
-## Security Vulnerabilities
+## 🧪 Testing
+- **Tests de Aceptación**: Utilizando Behat, para verificar casos de uso completos desde la perspectiva del usuario.
+- **Tests Unitarios**: Enfocados en la capa de Aplicación con PHPUnit.
+- **Tests de Integración**: Verifican la interacción entre capas y dependencias externas.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Los mocks de la API de Giphy se realizan con Wiremock para simular el entorno lo mas similar posible.
 
-## License
+Ejecutar todos los tests:
+```bash
+make test
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Los tests generaran trafico de ejemplo el cual sera loggeado en Elasticsearch y podra ser visualizado en Kibana.
+
+## 🔒 Protección de Commits
+Este proyecto utiliza GrumPHP para proteger el flujo de commits. Antes de permitir un commit, se ejecutan:
+- Linters con ECS.
+- Análisis estático con PHPStan y Phpmd.
+- Pruebas unitarias y de integracion con PHPUnit.
+- Validación de estándares de arquitectura con PHPAT.
+
+## 📊 Auditoria
+El sistema cuenta con auditoria de requests configurado a través de Elasticsearch y Kibana.
+
+Acceso a las herramientas de logs y visualizacion:
+- Elasticsearch: [http://localhost:9200/audit_logs/_search](http://localhost:9200/audit_logs/_search)
+- Kibana (para el dashboard de Auditoria): [http://localhost:5601](http://localhost:5601)
+  1. Ir al menu izquierdo (burger)
+  2. Presionar "Dashboard" o "Audit logs Dashboard"
+  3. Abrir el dashboard de auditoria
+  
+  ![img.png](docs/img.png)
+
+
+### Métricas disponibles
+- Métricas de aplicación (tasa de errores, servicios, respuestas HTTP, etc.).
+- Logs estructurados en Elasticsearch.
+
+#### Dashboard
+![img_1.png](docs/img_1.png)
+
+#### Logs
+![img_2.png](docs/img_2.png)
+
+## 📝 Diagrama Entidad-Relacion (DER)
+
+La tabla `migrations` es gestionada por Doctrine ORM y gobierna las siguientes tablas:
+
+La entidad `users` pertenece al modulo de Usuarios.
+
+La entidad `favorites` pertenece al modulo de Favoritos.
+
+La entidad `eloquent_migrations` es gestionada por Eloquent y gobierna las siguientes tablas con Passport/OAuth2:
+- oauth_access_tokens
+- oauth_clients
+- oauth_auth_codes
+- oauth_personal_access_clients
+- oauth_refresh_tokens
+- personal_access_tokens
+
+![der.jpg](docs/der.jpg)
+
+## 🧹 Mantenimiento
+Limpiar contenedores y datos:
+```bash
+make clean-cache
+```
+Actualizar dependencias:
+```bash
+make composer-install
+```
+
+## 💡 Mejoras Futuras
+- **Integrar el patrón Criteria/Specification**:
+  Permite definir reglas de filtrado reutilizables y combinar criterios para consultas más limpias y flexibles.
+- **Implementar Object Mothers para los tests**: Facilitan la creación de objetos complejos para pruebas reduciendo el codigo duplicado.
+- **Integrar herramientas de observabilidad adicionales (e.g., Prometheus/Sentry/New Relic)**.
+- **Extender cobertura de tests de aceptación, integracion y unitarios**.
+- **Implementar xDebug para debug y profiling**.
+
+
+## 📝 Licencia
+Este proyecto está licenciado bajo MIT.

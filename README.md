@@ -146,7 +146,10 @@ La entidad `eloquent_migrations` es gestionada por Eloquent y gobierna las sigui
 - oauth_refresh_tokens
 - personal_access_tokens
 
-![der.jpg](docs/der.jpg)
+![der.jpg](docs/diagrams/der.jpg)
+
+## 📝 Diagrama de Casos de Uso
+![use_cases_diagram.png](docs/diagrams/use_cases_diagram.png)
 
 ## 🧹 Mantenimiento
 Limpiar contenedores y datos:

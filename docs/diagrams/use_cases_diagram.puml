@@ -1,0 +1,24 @@
+@startuml
+actor Usuario
+
+rectangle "App API" {
+    usecase "Login" as UC1
+    usecase "Guardar GIF como Favorito" as UC4
+    usecase "Buscar GIFs" as UC2
+    usecase "Buscar un GIF por ID" as UC3
+}
+
+rectangle "Servicio Externo: Giphy" {
+    usecase "Realizar búsqueda de GIFs" as EXT1
+    usecase "Obtener detalles de un GIF por ID" as EXT2
+}
+
+left to right direction
+Usuario --> UC1
+Usuario --> UC2
+Usuario --> UC3
+Usuario --> UC4
+
+UC2 --> EXT1 : "Consulta a Giphy API"
+UC3 --> EXT2 : "Consulta a Giphy API"
+@enduml

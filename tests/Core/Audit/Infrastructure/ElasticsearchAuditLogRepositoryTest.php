@@ -45,7 +45,7 @@ final class ElasticsearchAuditLogRepositoryTest extends CoreInfrastructureTestCa
 			'index' => 'audit_logs',
 			'body'  => [
 				'query' => [
-					'term' => ['user_id.keyword' => 'test-user-id'],
+					'term' => ['user_id' => 'test-user-id'],
 				],
 			],
 		]);

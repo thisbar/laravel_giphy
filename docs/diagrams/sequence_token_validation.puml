@@ -1,0 +1,22 @@
+@startuml
+actor Usuario
+
+participant "Request" as HttpRequest
+participant "AuthenticateMiddleware" as Middleware
+participant "JWTService" as JWTService
+participant "UserRepository" as Repository
+
+Usuario -> HttpRequest: Solicitud HTTP protegida (Authorization: Bearer <Token>)
+HttpRequest -> Middleware: handle(Request, next)
+Middleware -> JWTService: validateToken(token)
+JWTService --> Middleware: UserId (si es válido) / Exception (si es inválido)
+
+alt Token válido
+    Middleware -> Repository: findById(UserId)
+    Repository --> Middleware: User
+    Middleware -> HttpRequest: next(Request) (procede al controlador)
+    HttpRequest --> Usuario: Respuesta exitosa (200 OK)
+else Token inválido
+    Middleware --> HttpRequest: HTTP 401 Unauthorized
+end
+@enduml

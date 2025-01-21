@@ -1,0 +1,22 @@
+@startuml
+actor Client
+participant "API Middleware" as Gateway
+participant Controller
+participant Service
+participant "AuditLogger" as Logger
+participant "ElasticSearch" as Elastic
+
+Client -> Gateway: HTTP Request
+Gateway -> Controller: Forward Request
+Controller -> Service: Process Business Logic
+Service -> Controller: Return Result
+Controller -> Gateway: HTTP Response
+
+activate Logger
+Gateway -> Logger: Capture Request & Response
+Logger -> Logger: Format Request & Response Data
+Logger -> Elastic: Send Logs (index audit_logs)
+deactivate Logger
+
+Client <- Gateway: HTTP Response
+@enduml

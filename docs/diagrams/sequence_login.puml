@@ -1,0 +1,17 @@
+@startuml
+actor Usuario
+
+participant "AuthController" as Controller
+participant "UserAuthenticator" as Service
+participant "UserRepository" as Repository
+participant "JWTService" as JWT
+
+Usuario -> Controller: POST /auth/login (email, password)
+Controller -> Service: authenticate(email, password)
+Service -> Repository: searchByEmail(email)
+Repository --> Service: User
+Service -> JWT: generateToken(User)
+JWT --> Service: Token
+Service --> Controller: Token
+Controller --> Usuario: HTTP 200 OK + Token
+@enduml

@@ -151,6 +151,27 @@ La entidad `eloquent_migrations` es gestionada por Eloquent y gobierna las sigui
 ## 📝 Diagrama de Casos de Uso
 ![use_cases_diagram.png](docs/diagrams/use_cases_diagram.png)
 
+## 📝 Diagramas de Secuencia
+### Login
+![Login](docs/diagrams/sequence_login.png)
+
+
+### Validar Auth Token
+![TokenValidation](docs/diagrams/sequence_token_validation.png)
+
+### Buscar GIF por ID
+![SearchGifById](docs/diagrams/sequence_search_gif_by_id.png)
+
+### Buscar GIFs
+![SearchGif](docs/diagrams/sequence_search_gifs.png)
+
+### Agregar GIF a favoritos
+![SearchGif](docs/diagrams/sequence_save_gif_as_favorite.png)
+
+### Log de Request/Response para Auditoria en Elasticsearch
+![Auditoria](docs/diagrams/sequence_audit.png)
+
+
 ## 🧹 Mantenimiento
 Limpiar contenedores y datos:
 ```bash

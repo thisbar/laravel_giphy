@@ -1,0 +1,31 @@
+@startuml
+actor Usuario
+
+participant "FavoritesController" as Controller
+participant "FavoriteSaver" as Service
+participant "FavoriteRepository" as Repository
+participant "NonExistantFavoriteByUserIdAndGifIdValidator" as Validator1
+participant "NonExistantFavoriteByUserIdAndAliasValidator" as Validator2
+participant "Giphy API" as Giphy
+
+Usuario -> Controller: POST /favorites (gifId, alias, userId)
+Controller -> Service: saveFavorite(gifId, alias, userId)
+Service -> Validator1: validateNotExistsByUserIdAndGifId(userId, gifId)
+Validator1 -> Repository: searchByUserIdAndGifId(userId, gifId)
+Repository --> Validator1: null (not found)
+Validator1 --> Service: Valid
+
+Service -> Validator2: validateNotExistsByUserIdAndAlias(userId, alias)
+Validator2 -> Repository: searchByUserIdAndAlias(userId, alias)
+Repository --> Validator2: null (not found)
+Validator2 --> Service: Valid
+
+Service -> Giphy: fetchGifDetails(gifId)
+Giphy --> Service: GifDetails
+
+Service -> Repository: save(Favorite)
+Repository --> Service: Success
+
+Service --> Controller: Confirmation response
+Controller --> Usuario: HTTP 201 Created
+@enduml

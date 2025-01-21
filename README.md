@@ -70,6 +70,13 @@ Esto ejecutará los siguientes pasos automáticamente:
 - Instalar las dependencias con Composer.
 - Configurar las bases de datos y migrar las tablas.
 
+## 📪 Coleccion de Postman
+Encontraras la coleccion y environment de postman en:
+
+```docs/Local.postman_environment.json```
+
+```docs/postman_collection.json```
+
 ## ✅ Calidad de Código
 Este proyecto utiliza herramientas avanzadas para garantizar calidad y consistencia del código:
 

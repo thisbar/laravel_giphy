@@ -61,8 +61,13 @@ shell                Enter shell php container
 ```
 
 ### Primer Inicio
-
-```bash
+```
+git clone https://github.com/thisbar/laravel_giphy laravel_giphy
+```
+```
+cd laravel_giphy
+```
+```
 make fresh-start
 ```
 Esto ejecutará los siguientes pasos automáticamente:
@@ -117,7 +122,10 @@ Este proyecto utiliza GrumPHP para proteger el flujo de commits. Antes de permit
 ## 📊 Auditoria
 El sistema cuenta con auditoria de requests configurado a través de Elasticsearch y Kibana.
 
+Ejecuta ```make test``` para ingestar logs.
+
 Acceso a las herramientas de logs y visualizacion:
+
 - Elasticsearch: [http://localhost:9200/audit_logs/_search](http://localhost:9200/audit_logs/_search)
 - Kibana (para el dashboard de Auditoria): [http://localhost:5601](http://localhost:5601)
   1. Ir al menu izquierdo (burger)

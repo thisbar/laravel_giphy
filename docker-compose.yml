@@ -78,21 +78,21 @@ services:
             - "5601:5601"
         depends_on:
             - elasticsearch
-        volumes:
-            - ./etc/docker/kibana:/data
         networks:
             - laravel
             - elastic-network
 
-    kibana-importer:
+    elastic-arranger:
         image: curlimages/curl:7.87.0
-        container_name: kibana_importer
+        container_name: elastic-arranger
         depends_on:
+            - elasticsearch
             - kibana
         volumes:
-            - ./etc/docker/kibana:/data
-        entrypoint: [ "/bin/sh", "/data/entrypoint.sh" ]
+            - ./etc/docker/elastic:/scripts
+        entrypoint: [ "/bin/sh", "/scripts/entrypoint.sh" ]
         environment:
+            - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
             - KIBANA_HOST=http://kibana:5601
         networks:
             - elastic-network

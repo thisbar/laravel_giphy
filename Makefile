@@ -13,7 +13,6 @@ composer-install: ## Install composer dependencies
 		composer:2.8.4 install \
 			--ignore-platform-reqs \
 			--no-ansi
-	$(DOCKER_EXEC) composer dump autoload -o
 
 start: composer-install ## Start the containers
 	@if [ ! -f .env ]; then cp .env.example .env; fi
@@ -21,6 +20,9 @@ start: composer-install ## Start the containers
 	@make clean-cache
 
 fresh-start: start ## Start the container for first time
+	$(DOCKER_EXEC) chown -R www-data:www-data /var/www/storage
+	$(DOCKER_EXEC) chmod -R 775 /var/www/storage
+	$(DOCKER_EXEC) composer dump-autoload -o
 	make prepare-db
 	$(DOCKER_EXEC) php artisan key:generate
 	$(DOCKER_EXEC) php artisan passport:install

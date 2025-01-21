@@ -34,9 +34,6 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www
 
-RUN chown -R www-data:www-data /var/www/storage \
-    chmod -R 775 /var/www/storage
-
 EXPOSE 9000
 
 CMD ["php-fpm"]

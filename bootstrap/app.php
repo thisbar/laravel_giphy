@@ -11,6 +11,8 @@
 |
 */
 
+use LaravelGhipy\Core\Audit\Domain\AuditLogRepository;
+use LaravelGhipy\Core\Audit\Infrastructure\ElasticsearchAuditLogRepository;
 use LaravelGhipy\Core\Favorites\Domain\FavoriteRepository;
 use LaravelGhipy\Core\Favorites\Infrastructure\Doctrine\DoctrineFavoriteRepository;
 use LaravelGhipy\Core\Gifs\Domain\GifsRepository;
@@ -51,6 +53,7 @@ $app->singleton(
 $app->bind(HttpClient::class, LaravelHttpClient::class);
 $app->bind(GifsRepository::class, GhipyGifsRepository::class);
 $app->bind(FavoriteRepository::class, DoctrineFavoriteRepository::class);
+$app->bind(AuditLogRepository::class, ElasticsearchAuditLogRepository::class);
 
 /*
 |--------------------------------------------------------------------------

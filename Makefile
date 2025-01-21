@@ -21,6 +21,8 @@ start: composer-install ## Start the containers
 
 fresh-start: start ## Start the container for first time
 	make prepare-db
+	$(DOCKER_EXEC) php artisan key:generate
+	$(DOCKER_EXEC) php artisan passport:install
 
 stop: ## Stop the containers
 	@docker compose stop
@@ -31,8 +33,7 @@ destroy: ## Delete the containers, networks and volumes
 build: ## Rebuild the containers from scratch
 	docker compose build --pull --force-rm --no-cache
 	make fresh-start
-	$(DOCKER_EXEC) php artisan key:generate
-	$(DOCKER_EXEC) php artisan passport:install
+
 
 static-analysis: ## Runs static code analysis to check for errors, architecture violations, and code quality issues.
 	$(DOCKER_EXEC) php ./vendor/psalm/phar/psalm.phar --config ./tools/psalm.xml

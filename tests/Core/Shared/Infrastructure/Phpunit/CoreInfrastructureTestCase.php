@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Core\Shared\Infrastructure\Phpunit;
+namespace LaravelGiphy\Tests\Core\Shared\Infrastructure\Phpunit;
 
 use Doctrine\ORM\EntityManager;
 use Elastic\Elasticsearch\Client as ElasticsearchClient;
-use LaravelGhipy\Tests\Shared\Infrastructure\PhpUnit\InfrastructureTestCase;
+use LaravelGiphy\Tests\Shared\Infrastructure\PhpUnit\InfrastructureTestCase;
 
 abstract class CoreInfrastructureTestCase extends InfrastructureTestCase
 {

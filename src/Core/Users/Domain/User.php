@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Users\Domain;
+namespace LaravelGiphy\Core\Users\Domain;
 
-use LaravelGhipy\Shared\Domain\Users\UserId;
+use LaravelGiphy\Shared\Domain\Users\UserId;
 
 final class User
 {

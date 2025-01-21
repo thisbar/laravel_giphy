@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Core\Favorites\Application;
+namespace LaravelGiphy\Tests\Core\Favorites\Application;
 
-use LaravelGhipy\Core\Favorites\Application\FavoriteSaver;
-use LaravelGhipy\Core\Favorites\Domain\Favorite;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteAlias;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteAliasAlreadyExists;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteAlreadyExists;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteRepository;
-use LaravelGhipy\Shared\Domain\Gifs\GifId;
-use LaravelGhipy\Shared\Domain\Users\UserId;
-use LaravelGhipy\Tests\Shared\Infrastructure\PhpUnit\UnitTestCase;
+use LaravelGiphy\Core\Favorites\Application\FavoriteSaver;
+use LaravelGiphy\Core\Favorites\Domain\Favorite;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteAlias;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteAliasAlreadyExists;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteAlreadyExists;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteRepository;
+use LaravelGiphy\Shared\Domain\Gifs\GifId;
+use LaravelGiphy\Shared\Domain\Users\UserId;
+use LaravelGiphy\Tests\Shared\Infrastructure\PhpUnit\UnitTestCase;
 use Mockery;
 use Mockery\MockInterface;
 

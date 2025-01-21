@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Gifs\Application;
+namespace LaravelGiphy\Core\Gifs\Application;
 
-use LaravelGhipy\Core\Gifs\Domain\GifsRepository;
-use LaravelGhipy\Core\Gifs\Domain\Search\PaginatedSearchResult;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\Limit;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\Offset;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\SearchQuery;
+use LaravelGiphy\Core\Gifs\Domain\GifsRepository;
+use LaravelGiphy\Core\Gifs\Domain\Search\PaginatedSearchResult;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\Limit;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\Offset;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\SearchQuery;
 
 final class AllGifsSearcher
 {

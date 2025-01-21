@@ -11,14 +11,14 @@
 |
 */
 
-use LaravelGhipy\Core\Audit\Domain\AuditLogRepository;
-use LaravelGhipy\Core\Audit\Infrastructure\ElasticsearchAuditLogRepository;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteRepository;
-use LaravelGhipy\Core\Favorites\Infrastructure\Doctrine\DoctrineFavoriteRepository;
-use LaravelGhipy\Core\Gifs\Domain\GifsRepository;
-use LaravelGhipy\Core\Gifs\Infrastructure\GhipyGifsRepository;
-use LaravelGhipy\Shared\Domain\HttpClient;
-use LaravelGhipy\Shared\Infrastructure\Http\LaravelHttpClient;
+use LaravelGiphy\Core\Audit\Domain\AuditLogRepository;
+use LaravelGiphy\Core\Audit\Infrastructure\ElasticsearchAuditLogRepository;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteRepository;
+use LaravelGiphy\Core\Favorites\Infrastructure\Doctrine\DoctrineFavoriteRepository;
+use LaravelGiphy\Core\Gifs\Domain\GifsRepository;
+use LaravelGiphy\Core\Gifs\Infrastructure\GhipyGifsRepository;
+use LaravelGiphy\Shared\Domain\HttpClient;
+use LaravelGiphy\Shared\Infrastructure\Http\LaravelHttpClient;
 
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)

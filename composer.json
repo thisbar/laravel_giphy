@@ -41,7 +41,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "LaravelGhipy\\": "src/",
+            "LaravelGiphy\\": "src/",
             "Tools\\": "tools/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
@@ -49,7 +49,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "LaravelGhipy\\Tests\\": "tests/"
+            "LaravelGiphy\\Tests\\": "tests/"
         }
     },
     "scripts": {

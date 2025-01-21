@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Shared\Infrastructure\Http;
+namespace LaravelGiphy\Shared\Infrastructure\Http;
 
-use LaravelGhipy\Shared\Domain\DomainError;
+use LaravelGiphy\Shared\Domain\DomainError;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 final class DomainExceptionToResponse

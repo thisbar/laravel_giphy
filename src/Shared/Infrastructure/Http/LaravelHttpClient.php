@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Shared\Infrastructure\Http;
+namespace LaravelGiphy\Shared\Infrastructure\Http;
 
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
-use LaravelGhipy\Shared\Domain\HttpClient;
+use LaravelGiphy\Shared\Domain\HttpClient;
 
 final class LaravelHttpClient implements HttpClient
 {

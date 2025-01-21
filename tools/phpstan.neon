@@ -9,11 +9,11 @@ parameters:
 
 services:
 	-
-		class: LaravelGhipy\Tests\Shared\SharedArchitectureTest
+		class: LaravelGiphy\Tests\Shared\SharedArchitectureTest
 		tags:
 			- phpat.test
 
 	-
-		class: LaravelGhipy\Tests\Core\CoreArchitectureTest
+		class: LaravelGiphy\Tests\Core\CoreArchitectureTest
 		tags:
 			- phpat.test

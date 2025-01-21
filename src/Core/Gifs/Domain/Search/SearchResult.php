@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Gifs\Domain\Search;
+namespace LaravelGiphy\Core\Gifs\Domain\Search;
 
-use LaravelGhipy\Core\Gifs\Domain\Gif;
-use LaravelGhipy\Core\Gifs\Domain\GifCollection;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\SearchMetadata;
+use LaravelGiphy\Core\Gifs\Domain\Gif;
+use LaravelGiphy\Core\Gifs\Domain\GifCollection;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\SearchMetadata;
 
 class SearchResult
 {

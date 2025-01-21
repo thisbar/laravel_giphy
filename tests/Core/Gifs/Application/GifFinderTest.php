@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Core\Gifs\Application;
+namespace LaravelGiphy\Tests\Core\Gifs\Application;
 
-use LaravelGhipy\Core\Gifs\Application\GifFinder;
-use LaravelGhipy\Core\Gifs\Domain\Gif;
-use LaravelGhipy\Core\Gifs\Domain\GifsRepository;
-use LaravelGhipy\Core\Gifs\Domain\GifTitle;
-use LaravelGhipy\Core\Gifs\Domain\GifUrl;
-use LaravelGhipy\Core\Gifs\Domain\Search\SearchResult;
-use LaravelGhipy\Shared\Domain\Gifs\GifId;
-use LaravelGhipy\Shared\Domain\ValueObject\HttpStatusCode;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\MetadataMessage;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\SearchMetadata;
-use LaravelGhipy\Tests\Shared\Infrastructure\PhpUnit\UnitTestCase;
+use LaravelGiphy\Core\Gifs\Application\GifFinder;
+use LaravelGiphy\Core\Gifs\Domain\Gif;
+use LaravelGiphy\Core\Gifs\Domain\GifsRepository;
+use LaravelGiphy\Core\Gifs\Domain\GifTitle;
+use LaravelGiphy\Core\Gifs\Domain\GifUrl;
+use LaravelGiphy\Core\Gifs\Domain\Search\SearchResult;
+use LaravelGiphy\Shared\Domain\Gifs\GifId;
+use LaravelGiphy\Shared\Domain\ValueObject\HttpStatusCode;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\MetadataMessage;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\SearchMetadata;
+use LaravelGiphy\Tests\Shared\Infrastructure\PhpUnit\UnitTestCase;
 use Mockery;
 use Mockery\MockInterface;
 

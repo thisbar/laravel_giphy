@@ -6,13 +6,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use LaravelGhipy\Core\Favorites\Application\FavoriteSaver;
-use LaravelGhipy\Core\Favorites\Domain\Favorite;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteAlias;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteRepository;
-use LaravelGhipy\Shared\Domain\Favorites\FavoriteId;
-use LaravelGhipy\Shared\Domain\Gifs\GifId;
-use LaravelGhipy\Shared\Domain\Users\UserId;
+use LaravelGiphy\Core\Favorites\Application\FavoriteSaver;
+use LaravelGiphy\Core\Favorites\Domain\Favorite;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteAlias;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteRepository;
+use LaravelGiphy\Shared\Domain\Favorites\FavoriteId;
+use LaravelGiphy\Shared\Domain\Gifs\GifId;
+use LaravelGiphy\Shared\Domain\Users\UserId;
 
 final class PostFavoriteController extends Controller
 {

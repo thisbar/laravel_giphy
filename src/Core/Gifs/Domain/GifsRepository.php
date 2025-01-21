@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Gifs\Domain;
+namespace LaravelGiphy\Core\Gifs\Domain;
 
-use LaravelGhipy\Core\Gifs\Domain\Search\PaginatedSearchResult;
-use LaravelGhipy\Core\Gifs\Domain\Search\SearchResult;
-use LaravelGhipy\Shared\Domain\Gifs\GifId;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\Limit;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\Offset;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\SearchQuery;
+use LaravelGiphy\Core\Gifs\Domain\Search\PaginatedSearchResult;
+use LaravelGiphy\Core\Gifs\Domain\Search\SearchResult;
+use LaravelGiphy\Shared\Domain\Gifs\GifId;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\Limit;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\Offset;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\SearchQuery;
 
 interface GifsRepository
 {

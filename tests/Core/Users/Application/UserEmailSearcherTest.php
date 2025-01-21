@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Core\Users\Application;
+namespace LaravelGiphy\Tests\Core\Users\Application;
 
-use LaravelGhipy\Core\Users\Application\UserEmailSearcher;
-use LaravelGhipy\Core\Users\Domain\Email;
-use LaravelGhipy\Core\Users\Domain\Password;
-use LaravelGhipy\Core\Users\Domain\User;
-use LaravelGhipy\Core\Users\Domain\UserRepository;
-use LaravelGhipy\Tests\Shared\Infrastructure\PhpUnit\UnitTestCase;
+use LaravelGiphy\Core\Users\Application\UserEmailSearcher;
+use LaravelGiphy\Core\Users\Domain\Email;
+use LaravelGiphy\Core\Users\Domain\Password;
+use LaravelGiphy\Core\Users\Domain\User;
+use LaravelGiphy\Core\Users\Domain\UserRepository;
+use LaravelGiphy\Tests\Shared\Infrastructure\PhpUnit\UnitTestCase;
 use Mockery;
 use Mockery\MockInterface;
 

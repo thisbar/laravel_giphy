@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Shared\Domain\ValueObject\Search;
+namespace LaravelGiphy\Shared\Domain\ValueObject\Search;
 
-use LaravelGhipy\Shared\Domain\ValueObject\HttpStatusCode;
+use LaravelGiphy\Shared\Domain\ValueObject\HttpStatusCode;
 
 final class SearchMetadata
 {

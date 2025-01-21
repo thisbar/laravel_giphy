@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Favorites\Domain;
+namespace LaravelGiphy\Core\Favorites\Domain;
 
-use LaravelGhipy\Shared\Domain\Gifs\GifId;
-use LaravelGhipy\Shared\Domain\Users\UserId;
+use LaravelGiphy\Shared\Domain\Gifs\GifId;
+use LaravelGiphy\Shared\Domain\Users\UserId;
 
 final class FavoriteUniquenessValidator
 {

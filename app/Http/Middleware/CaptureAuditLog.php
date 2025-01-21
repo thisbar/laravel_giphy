@@ -7,8 +7,8 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use LaravelGhipy\Core\Audit\Application\AuditEntryLogger;
-use LaravelGhipy\Core\Audit\Domain\AuditLog;
+use LaravelGiphy\Core\Audit\Application\AuditEntryLogger;
+use LaravelGiphy\Core\Audit\Domain\AuditLog;
 use Symfony\Component\HttpFoundation\Response;
 
 final class CaptureAuditLog

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Favorites\Domain;
+namespace LaravelGiphy\Core\Favorites\Domain;
 
-use LaravelGhipy\Shared\Domain\DomainError;
+use LaravelGiphy\Shared\Domain\DomainError;
 
 final class FavoriteAliasAlreadyExists extends DomainError
 {

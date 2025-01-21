@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Favorites\Infrastructure\Doctrine;
+namespace LaravelGiphy\Core\Favorites\Infrastructure\Doctrine;
 
 use Doctrine\ORM\EntityManagerInterface;
-use LaravelGhipy\Core\Favorites\Domain\Favorite;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteAlias;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteRepository;
-use LaravelGhipy\Shared\Domain\Favorites\FavoriteId;
-use LaravelGhipy\Shared\Domain\Gifs\GifId;
-use LaravelGhipy\Shared\Domain\Users\UserId;
+use LaravelGiphy\Core\Favorites\Domain\Favorite;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteAlias;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteRepository;
+use LaravelGiphy\Shared\Domain\Favorites\FavoriteId;
+use LaravelGiphy\Shared\Domain\Gifs\GifId;
+use LaravelGiphy\Shared\Domain\Users\UserId;
 
 final class DoctrineFavoriteRepository implements FavoriteRepository
 {

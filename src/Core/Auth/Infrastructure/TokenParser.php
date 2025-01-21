@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Auth\Infrastructure;
+namespace LaravelGiphy\Core\Auth\Infrastructure;
 
 use Exception;
 use InvalidArgumentException;

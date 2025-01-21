@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Users\Domain;
+namespace LaravelGiphy\Core\Users\Domain;
 
 use InvalidArgumentException;
-use LaravelGhipy\Shared\Domain\ValueObject\StringValueObject;
+use LaravelGiphy\Shared\Domain\ValueObject\StringValueObject;
 
 final class Email extends StringValueObject
 {

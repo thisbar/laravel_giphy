@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Shared\Domain\Gifs;
+namespace LaravelGiphy\Shared\Domain\Gifs;
 
-use LaravelGhipy\Shared\Domain\ValueObject\StringValueObject;
+use LaravelGiphy\Shared\Domain\ValueObject\StringValueObject;
 
 final class GifId extends StringValueObject
 {

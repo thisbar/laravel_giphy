@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Audit\Application;
+namespace LaravelGiphy\Core\Audit\Application;
 
-use LaravelGhipy\Core\Audit\Domain\AuditLog;
-use LaravelGhipy\Core\Audit\Domain\AuditLogRepository;
+use LaravelGiphy\Core\Audit\Domain\AuditLog;
+use LaravelGiphy\Core\Audit\Domain\AuditLogRepository;
 
 final class AuditEntryLogger
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Gifs\Domain;
+namespace LaravelGiphy\Core\Gifs\Domain;
 
 use InvalidArgumentException;
 

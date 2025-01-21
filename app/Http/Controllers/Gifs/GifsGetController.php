@@ -5,11 +5,11 @@ namespace App\Http\Controllers\Gifs;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use LaravelGhipy\Core\Gifs\Application\AllGifsSearcher;
-use LaravelGhipy\Core\Gifs\Domain\GifsRepository;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\Limit;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\Offset;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\SearchQuery;
+use LaravelGiphy\Core\Gifs\Application\AllGifsSearcher;
+use LaravelGiphy\Core\Gifs\Domain\GifsRepository;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\Limit;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\Offset;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\SearchQuery;
 
 final class GifsGetController extends Controller
 {

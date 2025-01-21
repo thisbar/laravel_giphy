@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Favorites\Infrastructure\Doctrine\Types;
+namespace LaravelGiphy\Core\Favorites\Infrastructure\Doctrine\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Type;
 use InvalidArgumentException;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteAlias;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteAlias;
 
 final class FavoriteAliasType extends Type
 {

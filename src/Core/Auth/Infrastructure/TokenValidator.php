@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Auth\Infrastructure;
+namespace LaravelGiphy\Core\Auth\Infrastructure;
 
 use Exception;
 use Illuminate\Support\Carbon;
 use InvalidArgumentException;
 use Laravel\Passport\Token as PassportToken;
 use Laravel\Passport\TokenRepository;
-use LaravelGhipy\Core\Users\Application\UserIdSearcher;
-use LaravelGhipy\Core\Users\Domain\UserRepository;
-use LaravelGhipy\Shared\Domain\Users\UserId;
+use LaravelGiphy\Core\Users\Application\UserIdSearcher;
+use LaravelGiphy\Core\Users\Domain\UserRepository;
+use LaravelGiphy\Shared\Domain\Users\UserId;
 use Lcobucci\JWT\Configuration;
 use Lcobucci\JWT\Token as JwtToken;
 use Lcobucci\JWT\Token\Plain;

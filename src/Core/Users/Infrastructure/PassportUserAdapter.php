@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Users\Infrastructure;
+namespace LaravelGiphy\Core\Users\Infrastructure;
 
 use Exception;
 use Illuminate\Contracts\Auth\Authenticatable;
-use LaravelGhipy\Core\Users\Domain\User;
+use LaravelGiphy\Core\Users\Domain\User;
 
 final class PassportUserAdapter implements Authenticatable
 {
 	public readonly User $user;
 	private string $accessToken = '';
-  
+
 	public function __construct(User $user)
 	{
 		$this->user = $user;

@@ -6,8 +6,8 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
-use LaravelGhipy\Core\Users\Domain\UserRepository;
-use LaravelGhipy\Core\Users\Infrastructure\DoctrineUserRepository;
+use LaravelGiphy\Core\Users\Domain\UserRepository;
+use LaravelGiphy\Core\Users\Infrastructure\DoctrineUserRepository;
 
 final class UserServiceProvider extends ServiceProvider
 {

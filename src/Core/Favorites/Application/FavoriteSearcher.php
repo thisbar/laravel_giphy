@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Favorites\Application;
+namespace LaravelGiphy\Core\Favorites\Application;
 
-use LaravelGhipy\Core\Favorites\Domain\Favorite;
-use LaravelGhipy\Core\Favorites\Domain\FavoriteRepository;
-use LaravelGhipy\Shared\Domain\Favorites\FavoriteId;
+use LaravelGiphy\Core\Favorites\Domain\Favorite;
+use LaravelGiphy\Core\Favorites\Domain\FavoriteRepository;
+use LaravelGiphy\Shared\Domain\Favorites\FavoriteId;
 
 final class FavoriteSearcher
 {

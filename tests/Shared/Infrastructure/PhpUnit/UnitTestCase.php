@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Shared\Infrastructure\PhpUnit;
+namespace LaravelGiphy\Tests\Shared\Infrastructure\PhpUnit;
 
 use InvalidArgumentException;
 use Mockery;

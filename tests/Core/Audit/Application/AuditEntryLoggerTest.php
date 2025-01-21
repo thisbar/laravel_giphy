@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Core\Audit\Application;
+namespace LaravelGiphy\Tests\Core\Audit\Application;
 
 use DateTimeImmutable;
-use LaravelGhipy\Core\Audit\Application\AuditEntryLogger;
-use LaravelGhipy\Core\Audit\Domain\AuditLog;
-use LaravelGhipy\Core\Audit\Domain\AuditLogRepository;
-use LaravelGhipy\Tests\Shared\Infrastructure\PhpUnit\UnitTestCase;
+use LaravelGiphy\Core\Audit\Application\AuditEntryLogger;
+use LaravelGiphy\Core\Audit\Domain\AuditLog;
+use LaravelGiphy\Core\Audit\Domain\AuditLogRepository;
+use LaravelGiphy\Tests\Shared\Infrastructure\PhpUnit\UnitTestCase;
 use Mockery;
 use Mockery\MockInterface;
 

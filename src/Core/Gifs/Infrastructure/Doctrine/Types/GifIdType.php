@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Gifs\Infrastructure\Doctrine\Types;
+namespace LaravelGiphy\Core\Gifs\Infrastructure\Doctrine\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Type;
-use LaravelGhipy\Shared\Domain\Gifs\GifId;
+use LaravelGiphy\Shared\Domain\Gifs\GifId;
 
 final class GifIdType extends Type
 {

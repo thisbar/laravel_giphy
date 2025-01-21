@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Shared\Infrastructure\Behat;
+namespace LaravelGiphy\Tests\Shared\Infrastructure\Behat;
 
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
@@ -10,12 +10,12 @@ use Behat\MinkExtension\Context\RawMinkContext;
 use DateTimeImmutable;
 use Illuminate\Contracts\Foundation\Application;
 use Laravel\Passport\PersonalAccessTokenFactory;
-use LaravelGhipy\Core\Auth\Infrastructure\TokenGenerator;
-use LaravelGhipy\Core\Users\Application\UserEmailSearcher;
-use LaravelGhipy\Core\Users\Domain\Email;
-use LaravelGhipy\Core\Users\Domain\UserRepository;
-use LaravelGhipy\Tests\Shared\Infrastructure\Mink\MinkHelper;
-use LaravelGhipy\Tests\Shared\Infrastructure\Mink\MinkSessionRequestHelper;
+use LaravelGiphy\Core\Auth\Infrastructure\TokenGenerator;
+use LaravelGiphy\Core\Users\Application\UserEmailSearcher;
+use LaravelGiphy\Core\Users\Domain\Email;
+use LaravelGiphy\Core\Users\Domain\UserRepository;
+use LaravelGiphy\Tests\Shared\Infrastructure\Mink\MinkHelper;
+use LaravelGiphy\Tests\Shared\Infrastructure\Mink\MinkSessionRequestHelper;
 use RuntimeException;
 
 final class ApiContext extends RawMinkContext

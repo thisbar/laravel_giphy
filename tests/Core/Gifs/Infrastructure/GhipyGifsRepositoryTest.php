@@ -2,26 +2,26 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Tests\Core\Gifs\Infrastructure;
+namespace LaravelGiphy\Tests\Core\Gifs\Infrastructure;
 
-use LaravelGhipy\Core\Gifs\Domain\Gif;
-use LaravelGhipy\Core\Gifs\Domain\GifCollection;
-use LaravelGhipy\Core\Gifs\Domain\GifTitle;
-use LaravelGhipy\Core\Gifs\Domain\GifUrl;
-use LaravelGhipy\Core\Gifs\Domain\Search\PaginatedSearchResult;
-use LaravelGhipy\Core\Gifs\Domain\Search\SearchResult;
-use LaravelGhipy\Core\Gifs\Infrastructure\GhipyGifsRepository;
-use LaravelGhipy\Shared\Domain\Gifs\GifId;
-use LaravelGhipy\Shared\Domain\HttpClient;
-use LaravelGhipy\Shared\Domain\ValueObject\Count;
-use LaravelGhipy\Shared\Domain\ValueObject\HttpStatusCode;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\Limit;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\MetadataMessage;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\Offset;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\Pagination;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\SearchMetadata;
-use LaravelGhipy\Shared\Domain\ValueObject\Search\SearchQuery;
-use LaravelGhipy\Tests\TestCase;
+use LaravelGiphy\Core\Gifs\Domain\Gif;
+use LaravelGiphy\Core\Gifs\Domain\GifCollection;
+use LaravelGiphy\Core\Gifs\Domain\GifTitle;
+use LaravelGiphy\Core\Gifs\Domain\GifUrl;
+use LaravelGiphy\Core\Gifs\Domain\Search\PaginatedSearchResult;
+use LaravelGiphy\Core\Gifs\Domain\Search\SearchResult;
+use LaravelGiphy\Core\Gifs\Infrastructure\GhipyGifsRepository;
+use LaravelGiphy\Shared\Domain\Gifs\GifId;
+use LaravelGiphy\Shared\Domain\HttpClient;
+use LaravelGiphy\Shared\Domain\ValueObject\Count;
+use LaravelGiphy\Shared\Domain\ValueObject\HttpStatusCode;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\Limit;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\MetadataMessage;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\Offset;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\Pagination;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\SearchMetadata;
+use LaravelGiphy\Shared\Domain\ValueObject\Search\SearchQuery;
+use LaravelGiphy\Tests\TestCase;
 
 final class GhipyGifsRepositoryTest extends TestCase
 {

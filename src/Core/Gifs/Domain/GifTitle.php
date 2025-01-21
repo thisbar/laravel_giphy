@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Gifs\Domain;
+namespace LaravelGiphy\Core\Gifs\Domain;
 
-use LaravelGhipy\Shared\Domain\ValueObject\StringValueObject;
+use LaravelGiphy\Shared\Domain\ValueObject\StringValueObject;
 
 final class GifTitle extends StringValueObject
 {

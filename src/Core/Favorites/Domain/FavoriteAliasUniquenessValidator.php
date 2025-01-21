@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace LaravelGhipy\Core\Favorites\Domain;
+namespace LaravelGiphy\Core\Favorites\Domain;
 
-use LaravelGhipy\Shared\Domain\Users\UserId;
+use LaravelGiphy\Shared\Domain\Users\UserId;
 
 final class FavoriteAliasUniquenessValidator
 {
